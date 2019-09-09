@@ -50,6 +50,7 @@ struct ContentView: View {
             }) {
                 Image(systemName: self.darkMode ? "sun.max.fill" : "moon.circle.fill")
                     .imageScale(.large)
+                    .padding()
             })
         }
         .onAppear() {
