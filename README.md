@@ -1,2 +1,2 @@
-# SFSymbols
-Using SwiftUI to view SF Symbols gallery
+<center><img src="sfsymbols-logo.png"></center>
+# SFSymbols - SwiftUI App
