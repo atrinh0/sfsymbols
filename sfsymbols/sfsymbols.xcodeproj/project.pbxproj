@@ -16,6 +16,7 @@
 		FC1E55EC2326D579003052AD /* sfsymbolsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1E55EB2326D579003052AD /* sfsymbolsTests.swift */; };
 		FC1E55F72326D579003052AD /* sfsymbolsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1E55F62326D579003052AD /* sfsymbolsUITests.swift */; };
 		FC1E56052326D6BC003052AD /* Symbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1E56042326D6BC003052AD /* Symbols.swift */; };
+		FC33A48323280F4800E9889C /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC33A48223280F4800E9889C /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		FC1E55F62326D579003052AD /* sfsymbolsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sfsymbolsUITests.swift; sourceTree = "<group>"; };
 		FC1E55F82326D579003052AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC1E56042326D6BC003052AD /* Symbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbols.swift; sourceTree = "<group>"; };
+		FC33A48223280F4800E9889C /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 			children = (
 				FC1E55D42326D576003052AD /* AppDelegate.swift */,
 				FC1E55D82326D576003052AD /* ContentView.swift */,
+				FC33A48223280F4800E9889C /* DetailView.swift */,
 				FC1E55D62326D576003052AD /* SceneDelegate.swift */,
 				FC1E56042326D6BC003052AD /* Symbols.swift */,
 				FC1E55E22326D578003052AD /* Info.plist */,
@@ -273,6 +276,7 @@
 				FC1E55D52326D576003052AD /* AppDelegate.swift in Sources */,
 				FC1E56052326D6BC003052AD /* Symbols.swift in Sources */,
 				FC1E55D72326D576003052AD /* SceneDelegate.swift in Sources */,
+				FC33A48323280F4800E9889C /* DetailView.swift in Sources */,
 				FC1E55D92326D576003052AD /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

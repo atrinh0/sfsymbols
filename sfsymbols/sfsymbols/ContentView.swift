@@ -10,15 +10,19 @@ import SwiftUI
 
 struct ContentView: View {
     @State var darkMode = true
-    @State var searchText = ""
+    @State var searchText = "pap"
+    @State var showingDetails = false
+    @State var focusedSymbol = ""
     
     var body: some View {
         NavigationView {
             List {
                 Section(header: HStack {
                     TextField("Search", text: $searchText)
+                        .disableAutocorrection(true)
                         .foregroundColor(Color.primary)
-                        .padding()
+                        .frame(height: 50)
+                        .padding([.leading, .trailing])
                     if !searchText.isEmpty {
                         Button(action: {
                             self.searchText = ""
@@ -32,13 +36,11 @@ struct ContentView: View {
                     }
                 }) {
                     ForEach(filteredSymbols(self.searchText), id: \.self) { symbol in
-                        HStack {
-                            Image(systemName: symbol)
-                                .imageScale(.large)
-                                .frame(width: 40, height: 40)
-                            Text(symbol)
-                                .font(.headline)
-                                .bold()
+                        Button(action: {
+                            self.focusedSymbol = symbol
+                            self.showingDetails.toggle()
+                        }) {
+                            SymbolRow(symbol: symbol)
                         }
                     }
                 }
@@ -56,6 +58,9 @@ struct ContentView: View {
         .onAppear() {
             self.reloadDarkMode(self.darkMode)
         }
+        .sheet(isPresented: $showingDetails) {
+            DetailView(symbol: self.focusedSymbol)
+        }
     }
     
     func reloadDarkMode(_ darkMode: Bool) {
@@ -66,6 +71,7 @@ struct ContentView: View {
         if searchText.isEmpty {
             return symbols
         }
+        
         return symbols.filter { $0.lowercased().contains(searchText.lowercased()) }
     }
 }
@@ -73,5 +79,21 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .colorScheme(.dark)
+    }
+}
+
+struct SymbolRow: View {
+    let symbol: String
+    
+    var body: some View {
+        HStack {
+            Image(systemName: symbol)
+                .imageScale(.large)
+                .frame(width: 40, height: 40)
+            Text(symbol)
+                .font(.headline)
+                .bold()
+        }
     }
 }
