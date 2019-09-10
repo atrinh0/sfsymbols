@@ -10,9 +10,12 @@ import SwiftUI
 
 struct ContentView: View {
     @State var darkMode = true
-    @State var searchText = "pap"
+    @State var searchText = ""
+    
     @State var showingDetails = false
     @State var focusedSymbol = ""
+    
+    private let listLimit = 100
     
     var body: some View {
         NavigationView {
@@ -35,12 +38,29 @@ struct ContentView: View {
                         }
                     }
                 }) {
-                    ForEach(filteredSymbols(self.searchText), id: \.self) { symbol in
+                    ForEach(filteredSymbols(self.searchText, restrictLimit: true), id: \.self) { symbol in
                         Button(action: {
                             self.focusedSymbol = symbol
                             self.showingDetails.toggle()
                         }) {
                             SymbolRow(symbol: symbol)
+                        }
+                    }
+                    if filteredSymbols(self.searchText, restrictLimit: true).count == listLimit {
+                        NavigationLink(destination:
+                            List {
+                                ForEach(filteredSymbols(self.searchText, restrictLimit: false), id: \.self) { symbol in
+                                    Button(action: {
+                                        self.focusedSymbol = symbol
+                                        self.showingDetails.toggle()
+                                    }) {
+                                        SymbolRow(symbol: symbol)
+                                    }
+                                }
+                        }.navigationBarTitle("", displayMode: .automatic)) {
+                            Text("See all \(filteredSymbols(self.searchText, restrictLimit: false).count) symbols")
+                                .font(.headline)
+                                .bold()
                         }
                     }
                 }
@@ -67,12 +87,25 @@ struct ContentView: View {
         UIApplication.shared.windows.first?.overrideUserInterfaceStyle = darkMode ? .dark : .light
     }
     
-    func filteredSymbols(_ searchText: String) -> [String] {
-        if searchText.isEmpty {
-            return symbols
+    func filteredSymbols(_ searchText: String, restrictLimit: Bool) -> [String] {
+        var filteredSymbols = symbols
+        if !searchText.isEmpty {
+            filteredSymbols = symbols.filter { $0.lowercased().contains(searchText.lowercased()) }
         }
         
-        return symbols.filter { $0.lowercased().contains(searchText.lowercased()) }
+        // optimization due to rendering 1600+ cells causes 100% CPU lag for 10 seconds
+        if restrictLimit && filteredSymbols.count > listLimit {
+            var trimmedSymbols: [String] = []
+            for symbol in filteredSymbols {
+                trimmedSymbols.append(symbol)
+                if trimmedSymbols.count == listLimit {
+                    break
+                }
+            }
+            filteredSymbols = trimmedSymbols
+        }
+        
+        return filteredSymbols
     }
 }
 
