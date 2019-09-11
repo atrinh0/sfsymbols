@@ -4,27 +4,25 @@
 
 > Experimenting with SwiftUI whilst creating a practical app to browse the SF Symbols via an iOS app.
 
-<center>
 ### List all SF Symbols
-![](./images/list.png)
+<img src="images/list.png" width="454" height="790">
 
 ### Dark/Light toggle
-![](./images/list-dark.png)
+<img src="images/list-dark.png" width="454" height="790">
 
 ### Sort
-![](./images/sort.png)
+<img src="images/sort.png" width="454" height="790">
 
 ### Filter
-![](./images/filter.png)
+<img src="images/filter.png" width="454" height="790">
 
 ### Symbol details
 Showcase the symbol in the navigation bar, tab bar, etc
-![](./images/details.png)
+
+<img src="images/details.png" width="454" height="790">
 
 ### Show symbol weights
-![](./images/details-dark.png)
-</center>
-
+<img src="images/details-dark.png" width="454" height="790">
 
 ### Known issues
 
