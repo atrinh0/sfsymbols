@@ -35,4 +35,6 @@ Showcase the symbol in the navigation bar, tab bar, etc
 
 ### Disclaimer
 
-> All content copyright of Apple
+> This is posted as a way to share SwiftUI learnings. Use it at your own risk.
+
+> It is your responsibility to make sure you are following the terms and conditions of using Apple's symbols. For more information, see [https://developer.apple.com/design/human-interface-guidelines/sf-symbols/overview/](https://developer.apple.com/design/human-interface-guidelines/sf-symbols/overview/).
