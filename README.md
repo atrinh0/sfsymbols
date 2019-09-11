@@ -30,6 +30,8 @@ Showcase the symbol in the navigation bar, tab bar, etc
 
 - SwiftUI does not handle dynamically filtering a list of 1600+ items, 100% CPU for 8 seconds (I capped the results to filter the first 50 symbols and exposed a `See all` option as a workaround)
 - iPad master/detail view
+- The symbols are copied from the SF Symbols beta mac app (this is a manual process)
+- There are a handful of icons that no longer exist in Xcode 11 GM Seed (but still exist on the SF Symbols mac app)
 
 ### Disclaimer
 
