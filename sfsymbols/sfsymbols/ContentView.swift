@@ -58,7 +58,7 @@ struct ContentView: View {
                                     }
                                 }
                         }.navigationBarTitle("", displayMode: .automatic)) {
-                            Text("See all \(filteredSymbols(self.searchText, restrictLimit: false).count) symbols")
+                            Text("See all \(filteredSymbols(self.searchText, restrictLimit: false).count) \(self.searchText.isEmpty ? "symbols" : "results")")
                                 .font(.headline)
                                 .bold()
                         }
@@ -93,7 +93,8 @@ struct ContentView: View {
             filteredSymbols = symbols.filter { $0.lowercased().contains(searchText.lowercased()) }
         }
         
-        // optimization due to rendering 1600+ cells causes 100% CPU lag for 10 seconds
+        // optimization due to rendering 1600+ cells causes 100% CPU lag for 8 seconds
+        // still occurs on Xcode 11 GM Seed
         if restrictLimit && filteredSymbols.count > listLimit {
             var trimmedSymbols: [String] = []
             for symbol in filteredSymbols {
