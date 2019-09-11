@@ -39,6 +39,7 @@ struct DetailView: View {
                             HStack {
                                 Image(systemName: self.symbol)
                                     .font(.system(size: 25, weight: weight))
+                                    .frame(width: 40, height: 40)
                                 Text(self.weightDescription(weight: weight))
                                     .font(.system(size: 18, weight: weight))
                             }
@@ -50,11 +51,10 @@ struct DetailView: View {
                     Image(systemName: symbol)
                         .imageScale(.large)
                         .padding()
-                })
-                .navigationBarItems(trailing: Button(action: { }) {
-                    Image(systemName: symbol)
-                        .imageScale(.large)
-                        .padding()
+                    }, trailing: Button(action: { }) {
+                        Image(systemName: symbol)
+                            .imageScale(.large)
+                            .padding()
                 })
             }
             .tabItem {
