@@ -11,7 +11,12 @@ import Foundation
 var symbolsSortedByDefault = rawSymbolsSortedByDefault.split(separator: "\n").map({ String($0) })
 var symbolsSortedByName = rawSymbolsSortedByName.split(separator: "\n").map({ String($0) })
 
-// as of SF Symbols beta Version 1.0 (12)
+// Last update
+// Released: September 11, 2019
+// Build: 1A84
+
+// MARK: - rawSymbolsSortedByDefault
+
 private var rawSymbolsSortedByDefault = """
 square.and.arrow.up
 square.and.arrow.up.fill
@@ -1693,6 +1698,8 @@ bitcoinsign.square.fill
 50.square
 50.square.fill
 """
+
+// MARK: - rawSymbolsSortedByName
 
 private var rawSymbolsSortedByName = """
 0.circle
