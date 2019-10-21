@@ -33,7 +33,7 @@ struct ContentView: View {
                         .disableAutocorrection(true)
                         .foregroundColor(Color.primary)
                         .frame(height: 50)
-                        .padding([.leading, .trailing])
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
                     if !searchText.isEmpty {
                         Button(action: {
                             self.searchText = ""
@@ -42,7 +42,6 @@ struct ContentView: View {
                             Image(systemName: "xmark.circle.fill")
                                 .imageScale(.large)
                                 .foregroundColor(Color.primary)
-                                .padding()
                         }
                     }
                 }) {
