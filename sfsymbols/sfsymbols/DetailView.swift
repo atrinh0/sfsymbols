@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct DetailView: View {
+    @Binding var showingDetails: Bool
     let symbol: String
     
     let fontWeights = [Font.Weight.ultraLight,
@@ -47,11 +48,15 @@ struct DetailView: View {
                     }
                 }
                 .navigationBarTitle(symbol)
-                .navigationBarItems(leading: Button(action: { }) {
+                .navigationBarItems(leading: Button(action: {
+                    self.showingDetails.toggle()
+                }) {
                     Image(systemName: symbol)
                         .imageScale(.large)
                         .padding()
-                    }, trailing: Button(action: { }) {
+                    }, trailing: Button(action: {
+                        self.showingDetails.toggle()
+                    }) {
                         Image(systemName: symbol)
                             .imageScale(.large)
                             .padding()
@@ -95,6 +100,6 @@ struct DetailView: View {
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView(symbol: "paperplane")
+        DetailView(showingDetails: .constant(true), symbol: "paperplane")
     }
 }

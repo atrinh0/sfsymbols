@@ -96,7 +96,7 @@ struct ContentView: View {
             self.reloadDarkMode(self.darkMode)
         }
         .sheet(isPresented: $showingDetails) {
-            DetailView(symbol: self.focusedSymbol)
+            DetailView(showingDetails: self.$showingDetails, symbol: self.focusedSymbol)
         }
         .actionSheet(isPresented: $showSortOptions) {
             ActionSheet(title: Text("Sort by"), message: nil, buttons: [
