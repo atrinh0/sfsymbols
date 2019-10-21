@@ -53,6 +53,7 @@
 		FC1E55F82326D579003052AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC1E56042326D6BC003052AD /* Symbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbols.swift; sourceTree = "<group>"; };
 		FC33A48223280F4800E9889C /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		FC5617982331A04E00CE22D3 /* sfsymbols.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = sfsymbols.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +104,7 @@
 		FC1E55D32326D576003052AD /* sfsymbols */ = {
 			isa = PBXGroup;
 			children = (
+				FC5617982331A04E00CE22D3 /* sfsymbols.entitlements */,
 				FC1E55D42326D576003052AD /* AppDelegate.swift */,
 				FC1E55D82326D576003052AD /* ContentView.swift */,
 				FC33A48223280F4800E9889C /* DetailView.swift */,
@@ -442,6 +444,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = sfsymbols/sfsymbols.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"sfsymbols/Preview Content\"";
 				DEVELOPMENT_TEAM = 6DRH5697SN;
@@ -453,6 +456,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.atrinh.sfsymbols;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -462,6 +466,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = sfsymbols/sfsymbols.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"sfsymbols/Preview Content\"";
 				DEVELOPMENT_TEAM = 6DRH5697SN;
@@ -473,6 +478,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.atrinh.sfsymbols;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
