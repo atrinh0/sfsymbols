@@ -12,8 +12,7 @@ var symbolsSortedByDefault = rawSymbolsSortedByDefault.split(separator: "\n").ma
 var symbolsSortedByName = rawSymbolsSortedByName.split(separator: "\n").map({ String($0) })
 
 // Last update
-// Released: September 11, 2019
-// Build: 1A84
+// Version 1.1 (18)
 
 // MARK: - rawSymbolsSortedByDefault
 
@@ -308,12 +307,8 @@ speaker
 speaker.fill
 speaker.slash
 speaker.slash.fill
-speaker.slash.rtl
-speaker.slash.fill.rtl
 speaker.zzz
 speaker.zzz.fill
-speaker.zzz.rtl
-speaker.zzz.fill.rtl
 speaker.1
 speaker.1.fill
 speaker.2
@@ -545,8 +540,6 @@ arrow.down.left.video
 arrow.down.left.video.fill
 questionmark.video
 questionmark.video.fill
-questionmark.video.rtl
-questionmark.video.fill.rtl
 envelope
 envelope.fill
 envelope.circle
@@ -890,7 +883,6 @@ list.dash
 list.bullet
 list.bullet.indent
 list.number
-list.number.rtl
 increase.indent
 decrease.indent
 decrease.quotelevel
@@ -2733,7 +2725,6 @@ list.bullet.below.rectangle
 list.bullet.indent
 list.dash
 list.number
-list.number.rtl
 livephoto
 livephoto.play
 livephoto.slash
@@ -2993,8 +2984,6 @@ questionmark.square
 questionmark.square.fill
 questionmark.video
 questionmark.video.fill
-questionmark.video.fill.rtl
-questionmark.video.rtl
 quote.bubble
 quote.bubble.fill
 r.circle
@@ -3113,12 +3102,8 @@ speaker.3.fill
 speaker.fill
 speaker.slash
 speaker.slash.fill
-speaker.slash.fill.rtl
-speaker.slash.rtl
 speaker.zzz
 speaker.zzz.fill
-speaker.zzz.fill.rtl
-speaker.zzz.rtl
 speedometer
 sportscourt
 sportscourt.fill
