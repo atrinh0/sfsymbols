@@ -11,13 +11,13 @@ import SwiftUI
 let cellWidth: CGFloat = 150
 
 struct ContentView: View {
-    @State var searchText = ""
+    @State private var searchText = ""
     
-    @State var showSortOptions = false
-    @State var sortOrder: SortOrder = .defaultOrder
+    @State private var showSortOptions = false
+    @State private var sortOrder: SortOrder = .defaultOrder
     
-    @State var showingDetails = false
-    @State var focusedSymbol = ""
+    @State private var showingDetails = false
+    @State private var focusedSymbol = ""
     
     enum SortOrder: String {
         case defaultOrder = "Default"
@@ -30,34 +30,75 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            ScrollView {
-                HStack {
-                    TextField("Search", text: $searchText)
-                        .disableAutocorrection(true)
-                        .foregroundColor(Color.primary)
-                        .frame(height: 50)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                    if !searchText.isEmpty {
-                        Button(action: {
-                            self.searchText = ""
-                            UIApplication.shared.windows.first?.endEditing(true)
-                        }) {
-                            Image(systemName: "xmark.circle.fill")
-                                .imageScale(.large)
-                                .foregroundColor(Color.primary)
+            ZStack {
+                ScrollView {
+                    HStack {
+                        TextField("Search", text: $searchText)
+                            .disableAutocorrection(true)
+                            .foregroundColor(Color.primary)
+                            .frame(height: 50)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                        if !searchText.isEmpty {
+                            Button(action: {
+                                searchText = ""
+                                UIApplication.shared.windows.first?.endEditing(true)
+                            }) {
+                                Image(systemName: "xmark.circle.fill")
+                                    .imageScale(.large)
+                                    .foregroundColor(Color.primary)
+                            }
+                        }
+                    }
+                    .padding(.horizontal)
+                    LazyVGrid(columns: layout, spacing: 16) {
+                        ForEach(filteredSymbols(searchText), id: \.self) { symbol in
+                            Button(action: {
+                                focusedSymbol = symbol
+                                withAnimation() {
+                                    showingDetails.toggle()
+                                }
+                            }) {
+                                SymbolCell(symbol: symbol)
+                            }
+                            .buttonStyle(PlainButtonStyle())
                         }
                     }
                 }
-                .padding(.horizontal)
-                LazyVGrid(columns: layout, spacing: 16) {
-                    ForEach(filteredSymbols(searchText), id: \.self) { symbol in
-                        Button(action: {
-                            focusedSymbol = symbol
-                            showingDetails.toggle()
-                        }) {
-                            SymbolCell(symbol: symbol)
+                ZStack {
+                    VisualEffectBlur(blurStyle: .systemUltraThinMaterial)
+                        .edgesIgnoringSafeArea(.all)
+                    VStack {
+                        VStack(spacing: 0) {
+                            ZStack {
+                                Rectangle()
+                                    .foregroundColor(Color(white: 0.1))
+                                    .frame(width: cellWidth, height: 156)
+                                Image(systemName: focusedSymbol)
+                                    .renderingMode(.original)
+                                    .imageScale(.large)
+                                    .scaleEffect(3.5)
+                            }
+                            ZStack {
+                                Rectangle()
+                                    .foregroundColor(Color(white: 0.9))
+                                    .frame(width: cellWidth, height: 156)
+                                Image(systemName: focusedSymbol)
+                                    .renderingMode(.original)
+                                    .imageScale(.large)
+                                    .scaleEffect(3.5)
+                            }
                         }
-                        .buttonStyle(PlainButtonStyle())
+                        .clipShape(RoundedRectangle(cornerRadius: 32, style: .continuous))
+                        Text(focusedSymbol)
+                            .font(.largeTitle)
+                            .multilineTextAlignment(.center)
+                            .frame(width: cellWidth * 2)
+                    }
+                }
+                .opacity(showingDetails ? 1 : 0)
+                .onTapGesture {
+                    withAnimation() {
+                        showingDetails = false
                     }
                 }
             }
@@ -73,9 +114,6 @@ struct ContentView: View {
                     }
                 }
             }
-        }
-        .sheet(isPresented: $showingDetails) {
-            //            DetailView(showingDetails: $showingDetails, symbol: focusedSymbol)
         }
         .actionSheet(isPresented: $showSortOptions) {
             ActionSheet(title: Text("Sort by"), message: nil, buttons: [
