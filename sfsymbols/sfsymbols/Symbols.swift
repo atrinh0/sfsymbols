@@ -8,8 +8,8 @@
 
 import Foundation
 
-var symbolsSortedByDefault = rawSymbolsSortedByDefault.split(separator: "\n").map({ String($0) })
-var symbolsSortedByName = rawSymbolsSortedByName.split(separator: "\n").map({ String($0) })
+let symbolsSortedByDefault = rawSymbolsSortedByDefault.split(separator: "\n").map({ String($0) })
+let symbolsSortedByName = rawSymbolsSortedByName.split(separator: "\n").map({ String($0) })
 
 // Last update
 // Version 1.1 (18)

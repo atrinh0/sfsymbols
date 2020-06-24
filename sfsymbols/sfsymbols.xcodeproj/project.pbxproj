@@ -7,71 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FC1E55D52326D576003052AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1E55D42326D576003052AD /* AppDelegate.swift */; };
-		FC1E55D72326D576003052AD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1E55D62326D576003052AD /* SceneDelegate.swift */; };
+		FC1E55D52326D576003052AD /* SFSymbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1E55D42326D576003052AD /* SFSymbols.swift */; };
 		FC1E55D92326D576003052AD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1E55D82326D576003052AD /* ContentView.swift */; };
 		FC1E55DB2326D578003052AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC1E55DA2326D578003052AD /* Assets.xcassets */; };
 		FC1E55DE2326D578003052AD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC1E55DD2326D578003052AD /* Preview Assets.xcassets */; };
-		FC1E55E12326D578003052AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC1E55DF2326D578003052AD /* LaunchScreen.storyboard */; };
-		FC1E55EC2326D579003052AD /* sfsymbolsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1E55EB2326D579003052AD /* sfsymbolsTests.swift */; };
-		FC1E55F72326D579003052AD /* sfsymbolsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1E55F62326D579003052AD /* sfsymbolsUITests.swift */; };
 		FC1E56052326D6BC003052AD /* Symbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1E56042326D6BC003052AD /* Symbols.swift */; };
-		FC33A48323280F4800E9889C /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC33A48223280F4800E9889C /* DetailView.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		FC1E55E82326D579003052AD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FC1E55C92326D576003052AD /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FC1E55D02326D576003052AD;
-			remoteInfo = sfsymbols;
-		};
-		FC1E55F32326D579003052AD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FC1E55C92326D576003052AD /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FC1E55D02326D576003052AD;
-			remoteInfo = sfsymbols;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		FC1E55D12326D576003052AD /* sfsymbols.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sfsymbols.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FC1E55D42326D576003052AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FC1E55D62326D576003052AD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FC1E55D42326D576003052AD /* SFSymbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbols.swift; sourceTree = "<group>"; };
 		FC1E55D82326D576003052AD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FC1E55DA2326D578003052AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC1E55DD2326D578003052AD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		FC1E55E02326D578003052AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC1E55E22326D578003052AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FC1E55E72326D579003052AD /* sfsymbolsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sfsymbolsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FC1E55EB2326D579003052AD /* sfsymbolsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sfsymbolsTests.swift; sourceTree = "<group>"; };
-		FC1E55ED2326D579003052AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FC1E55F22326D579003052AD /* sfsymbolsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sfsymbolsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FC1E55F62326D579003052AD /* sfsymbolsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sfsymbolsUITests.swift; sourceTree = "<group>"; };
-		FC1E55F82326D579003052AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC1E56042326D6BC003052AD /* Symbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbols.swift; sourceTree = "<group>"; };
-		FC33A48223280F4800E9889C /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		FC5617982331A04E00CE22D3 /* sfsymbols.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = sfsymbols.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		FC1E55CE2326D576003052AD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FC1E55E42326D579003052AD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FC1E55EF2326D579003052AD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -85,8 +40,6 @@
 			isa = PBXGroup;
 			children = (
 				FC1E55D32326D576003052AD /* sfsymbols */,
-				FC1E55EA2326D579003052AD /* sfsymbolsTests */,
-				FC1E55F52326D579003052AD /* sfsymbolsUITests */,
 				FC1E55D22326D576003052AD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -95,8 +48,6 @@
 			isa = PBXGroup;
 			children = (
 				FC1E55D12326D576003052AD /* sfsymbols.app */,
-				FC1E55E72326D579003052AD /* sfsymbolsTests.xctest */,
-				FC1E55F22326D579003052AD /* sfsymbolsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -105,14 +56,11 @@
 			isa = PBXGroup;
 			children = (
 				FC5617982331A04E00CE22D3 /* sfsymbols.entitlements */,
-				FC1E55D42326D576003052AD /* AppDelegate.swift */,
+				FC1E55D42326D576003052AD /* SFSymbols.swift */,
 				FC1E55D82326D576003052AD /* ContentView.swift */,
-				FC33A48223280F4800E9889C /* DetailView.swift */,
-				FC1E55D62326D576003052AD /* SceneDelegate.swift */,
 				FC1E56042326D6BC003052AD /* Symbols.swift */,
 				FC1E55E22326D578003052AD /* Info.plist */,
 				FC1E55DA2326D578003052AD /* Assets.xcassets */,
-				FC1E55DF2326D578003052AD /* LaunchScreen.storyboard */,
 				FC1E55DC2326D578003052AD /* Preview Content */,
 			);
 			path = sfsymbols;
@@ -124,24 +72,6 @@
 				FC1E55DD2326D578003052AD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		FC1E55EA2326D579003052AD /* sfsymbolsTests */ = {
-			isa = PBXGroup;
-			children = (
-				FC1E55EB2326D579003052AD /* sfsymbolsTests.swift */,
-				FC1E55ED2326D579003052AD /* Info.plist */,
-			);
-			path = sfsymbolsTests;
-			sourceTree = "<group>";
-		};
-		FC1E55F52326D579003052AD /* sfsymbolsUITests */ = {
-			isa = PBXGroup;
-			children = (
-				FC1E55F62326D579003052AD /* sfsymbolsUITests.swift */,
-				FC1E55F82326D579003052AD /* Info.plist */,
-			);
-			path = sfsymbolsUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,42 +94,6 @@
 			productReference = FC1E55D12326D576003052AD /* sfsymbols.app */;
 			productType = "com.apple.product-type.application";
 		};
-		FC1E55E62326D579003052AD /* sfsymbolsTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FC1E55FE2326D579003052AD /* Build configuration list for PBXNativeTarget "sfsymbolsTests" */;
-			buildPhases = (
-				FC1E55E32326D579003052AD /* Sources */,
-				FC1E55E42326D579003052AD /* Frameworks */,
-				FC1E55E52326D579003052AD /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FC1E55E92326D579003052AD /* PBXTargetDependency */,
-			);
-			name = sfsymbolsTests;
-			productName = sfsymbolsTests;
-			productReference = FC1E55E72326D579003052AD /* sfsymbolsTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		FC1E55F12326D579003052AD /* sfsymbolsUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FC1E56012326D579003052AD /* Build configuration list for PBXNativeTarget "sfsymbolsUITests" */;
-			buildPhases = (
-				FC1E55EE2326D579003052AD /* Sources */,
-				FC1E55EF2326D579003052AD /* Frameworks */,
-				FC1E55F02326D579003052AD /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FC1E55F42326D579003052AD /* PBXTargetDependency */,
-			);
-			name = sfsymbolsUITests;
-			productName = sfsymbolsUITests;
-			productReference = FC1E55F22326D579003052AD /* sfsymbolsUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -207,19 +101,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "An Trinh";
 				TargetAttributes = {
 					FC1E55D02326D576003052AD = {
 						CreatedOnToolsVersion = 11.0;
-					};
-					FC1E55E62326D579003052AD = {
-						CreatedOnToolsVersion = 11.0;
-						TestTargetID = FC1E55D02326D576003052AD;
-					};
-					FC1E55F12326D579003052AD = {
-						CreatedOnToolsVersion = 11.0;
-						TestTargetID = FC1E55D02326D576003052AD;
 					};
 				};
 			};
@@ -237,8 +123,6 @@
 			projectRoot = "";
 			targets = (
 				FC1E55D02326D576003052AD /* sfsymbols */,
-				FC1E55E62326D579003052AD /* sfsymbolsTests */,
-				FC1E55F12326D579003052AD /* sfsymbolsUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -248,23 +132,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC1E55E12326D578003052AD /* LaunchScreen.storyboard in Resources */,
 				FC1E55DE2326D578003052AD /* Preview Assets.xcassets in Resources */,
 				FC1E55DB2326D578003052AD /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FC1E55E52326D579003052AD /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FC1E55F02326D579003052AD /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,55 +144,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC1E55D52326D576003052AD /* AppDelegate.swift in Sources */,
+				FC1E55D52326D576003052AD /* SFSymbols.swift in Sources */,
 				FC1E56052326D6BC003052AD /* Symbols.swift in Sources */,
-				FC1E55D72326D576003052AD /* SceneDelegate.swift in Sources */,
-				FC33A48323280F4800E9889C /* DetailView.swift in Sources */,
 				FC1E55D92326D576003052AD /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FC1E55E32326D579003052AD /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FC1E55EC2326D579003052AD /* sfsymbolsTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FC1E55EE2326D579003052AD /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FC1E55F72326D579003052AD /* sfsymbolsUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		FC1E55E92326D579003052AD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FC1E55D02326D576003052AD /* sfsymbols */;
-			targetProxy = FC1E55E82326D579003052AD /* PBXContainerItemProxy */;
-		};
-		FC1E55F42326D579003052AD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FC1E55D02326D576003052AD /* sfsymbols */;
-			targetProxy = FC1E55F32326D579003052AD /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		FC1E55DF2326D578003052AD /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FC1E55E02326D578003052AD /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		FC1E55F92326D579003052AD /* Debug */ = {
@@ -352,6 +179,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -376,7 +204,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -412,6 +240,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -430,7 +259,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -484,90 +313,6 @@
 			};
 			name = Release;
 		};
-		FC1E55FF2326D579003052AD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6DRH5697SN;
-				INFOPLIST_FILE = sfsymbolsTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.atrinh.sfsymbolsTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/sfsymbols.app/sfsymbols";
-			};
-			name = Debug;
-		};
-		FC1E56002326D579003052AD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6DRH5697SN;
-				INFOPLIST_FILE = sfsymbolsTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.atrinh.sfsymbolsTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/sfsymbols.app/sfsymbols";
-			};
-			name = Release;
-		};
-		FC1E56022326D579003052AD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6DRH5697SN;
-				INFOPLIST_FILE = sfsymbolsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.atrinh.sfsymbolsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = sfsymbols;
-			};
-			name = Debug;
-		};
-		FC1E56032326D579003052AD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6DRH5697SN;
-				INFOPLIST_FILE = sfsymbolsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.atrinh.sfsymbolsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = sfsymbols;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -585,24 +330,6 @@
 			buildConfigurations = (
 				FC1E55FC2326D579003052AD /* Debug */,
 				FC1E55FD2326D579003052AD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FC1E55FE2326D579003052AD /* Build configuration list for PBXNativeTarget "sfsymbolsTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FC1E55FF2326D579003052AD /* Debug */,
-				FC1E56002326D579003052AD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FC1E56012326D579003052AD /* Build configuration list for PBXNativeTarget "sfsymbolsUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FC1E56022326D579003052AD /* Debug */,
-				FC1E56032326D579003052AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
