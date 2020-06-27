@@ -14,18 +14,16 @@ struct SymbolCell: View {
 
     var body: some View {
         VStack {
-            HStack(spacing: 0) {
-                ZStack {
-                    RoundedRectangle(cornerRadius: isFocused ? 16 : 8, style: .continuous)
-                        .foregroundColor(Color.secondary.opacity(0.25))
-                        .frame(width: isFocused ? 200 : 100, height: isFocused ? 156 : 78)
-                    Image(systemName: symbol)
-                        .renderingMode(isMulticolor ? .original : .template)
-                        .foregroundColor(isMulticolor ? .none : .primary)
-                        .imageScale(.large)
-                        .font(isMulticolor ? .none : .system(size: isFocused ? 60 : 30))
-                        .scaleEffect(isMulticolor ? (isFocused ? 3.5 : 1.75) : 1)
-                }
+            ZStack {
+                RoundedRectangle(cornerRadius: isFocused ? 24 : 8, style: .continuous)
+                    .foregroundColor(Color.secondary.opacity(0.25))
+                    .frame(width: isFocused ? 300 : 100, height: isFocused ? 234 : 78)
+                Image(systemName: symbol)
+                    .renderingMode(isMulticolor ? .original : .template)
+                    .foregroundColor(isMulticolor ? .none : .primary)
+                    .imageScale(.large)
+                    .font(isMulticolor ? .none : .system(size: isFocused ? 90 : 30))
+                    .scaleEffect(isMulticolor ? (isFocused ? 5.25 : 1.75) : 1)
             }
             Text(symbol)
                 .font(isFocused ? .largeTitle : .caption)
