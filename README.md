@@ -8,7 +8,7 @@
 </p>
  
  
-#SF Symbols (SwiftUI App)
+<h1>SF Symbols (SwiftUI App)</h1>
 > Experimenting with SwiftUI whilst creating a practical app to browse the SF Symbols via an iOS/iPadOS app.
 
 ### Grid
