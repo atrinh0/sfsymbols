@@ -76,7 +76,7 @@ struct SymbolsListView: View {
             }
         }
         .sheet(isPresented: $showingDetails) {
-            DetailView(showingDetails: $showSortOptions, symbol: focusedSymbol)
+            DetailsView(showingDetails: $showingDetails, symbol: focusedSymbol)
         }
         .actionSheet(isPresented: $showSortOptions) {
             ActionSheet(title: Text("Sort by"), message: nil, buttons: [
@@ -86,6 +86,7 @@ struct SymbolsListView: View {
             ]
             )
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
     
     private func filteredSymbols(_ searchText: String) -> [String] {

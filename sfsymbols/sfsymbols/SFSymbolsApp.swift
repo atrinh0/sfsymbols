@@ -12,7 +12,7 @@ import SwiftUI
 struct SFSymbolsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SymbolsListView()
         }
     }
 }
