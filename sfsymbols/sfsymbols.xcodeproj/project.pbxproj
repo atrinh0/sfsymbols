@@ -7,17 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FC1E55D52326D576003052AD /* SFSymbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1E55D42326D576003052AD /* SFSymbols.swift */; };
+		FC1E55D52326D576003052AD /* SFSymbolsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1E55D42326D576003052AD /* SFSymbolsApp.swift */; };
 		FC1E55D92326D576003052AD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1E55D82326D576003052AD /* ContentView.swift */; };
 		FC1E55DB2326D578003052AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC1E55DA2326D578003052AD /* Assets.xcassets */; };
 		FC1E55DE2326D578003052AD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC1E55DD2326D578003052AD /* Preview Assets.xcassets */; };
 		FC1E56052326D6BC003052AD /* Symbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1E56042326D6BC003052AD /* Symbols.swift */; };
 		FC93E30324A3EA65000FB211 /* VisualEffectBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC93E30224A3EA65000FB211 /* VisualEffectBlur.swift */; };
+		FCCE85FC24A7796D00781703 /* SymbolCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCE85FB24A7796D00781703 /* SymbolCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FC1E55D12326D576003052AD /* sfsymbols.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sfsymbols.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FC1E55D42326D576003052AD /* SFSymbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbols.swift; sourceTree = "<group>"; };
+		FC1E55D42326D576003052AD /* SFSymbolsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbolsApp.swift; sourceTree = "<group>"; };
 		FC1E55D82326D576003052AD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FC1E55DA2326D578003052AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC1E55DD2326D578003052AD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -25,6 +26,7 @@
 		FC1E56042326D6BC003052AD /* Symbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbols.swift; sourceTree = "<group>"; };
 		FC5617982331A04E00CE22D3 /* sfsymbols.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = sfsymbols.entitlements; sourceTree = "<group>"; };
 		FC93E30224A3EA65000FB211 /* VisualEffectBlur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffectBlur.swift; sourceTree = "<group>"; };
+		FCCE85FB24A7796D00781703 /* SymbolCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,14 +59,11 @@
 		FC1E55D32326D576003052AD /* sfsymbols */ = {
 			isa = PBXGroup;
 			children = (
-				FC5617982331A04E00CE22D3 /* sfsymbols.entitlements */,
-				FC1E55D42326D576003052AD /* SFSymbols.swift */,
+				FCCE85F824A7787900781703 /* Supporting files */,
+				FCCE85F724A7783500781703 /* Extras */,
+				FC1E55D42326D576003052AD /* SFSymbolsApp.swift */,
 				FC1E55D82326D576003052AD /* ContentView.swift */,
-				FC1E56042326D6BC003052AD /* Symbols.swift */,
-				FC1E55E22326D578003052AD /* Info.plist */,
-				FC1E55DA2326D578003052AD /* Assets.xcassets */,
-				FC1E55DC2326D578003052AD /* Preview Content */,
-				FC93E30224A3EA65000FB211 /* VisualEffectBlur.swift */,
+				FCCE85FB24A7796D00781703 /* SymbolCell.swift */,
 			);
 			path = sfsymbols;
 			sourceTree = "<group>";
@@ -75,6 +74,26 @@
 				FC1E55DD2326D578003052AD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FCCE85F724A7783500781703 /* Extras */ = {
+			isa = PBXGroup;
+			children = (
+				FC93E30224A3EA65000FB211 /* VisualEffectBlur.swift */,
+			);
+			path = Extras;
+			sourceTree = "<group>";
+		};
+		FCCE85F824A7787900781703 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				FC1E55DC2326D578003052AD /* Preview Content */,
+				FC1E56042326D6BC003052AD /* Symbols.swift */,
+				FC5617982331A04E00CE22D3 /* sfsymbols.entitlements */,
+				FC1E55E22326D578003052AD /* Info.plist */,
+				FC1E55DA2326D578003052AD /* Assets.xcassets */,
+			);
+			path = "Supporting files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,7 +166,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC1E55D52326D576003052AD /* SFSymbols.swift in Sources */,
+				FC1E55D52326D576003052AD /* SFSymbolsApp.swift in Sources */,
+				FCCE85FC24A7796D00781703 /* SymbolCell.swift in Sources */,
 				FC1E56052326D6BC003052AD /* Symbols.swift in Sources */,
 				FC1E55D92326D576003052AD /* ContentView.swift in Sources */,
 				FC93E30324A3EA65000FB211 /* VisualEffectBlur.swift in Sources */,
@@ -277,12 +297,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = sfsymbols/sfsymbols.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "sfsymbols/Supporting files/sfsymbols.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"sfsymbols/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"sfsymbols/Supporting files/Preview Content\"";
 				DEVELOPMENT_TEAM = 6DRH5697SN;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = sfsymbols/Info.plist;
+				INFOPLIST_FILE = "sfsymbols/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -299,12 +319,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = sfsymbols/sfsymbols.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "sfsymbols/Supporting files/sfsymbols.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"sfsymbols/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"sfsymbols/Supporting files/Preview Content\"";
 				DEVELOPMENT_TEAM = 6DRH5697SN;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = sfsymbols/Info.plist;
+				INFOPLIST_FILE = "sfsymbols/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

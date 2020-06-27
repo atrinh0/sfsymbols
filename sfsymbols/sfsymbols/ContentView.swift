@@ -8,24 +8,24 @@
 
 import SwiftUI
 
-let cellWidth: CGFloat = 150
-
 struct ContentView: View {
+    @Namespace private var namespace
+    
     @State private var searchText = ""
     
     @State private var showSortOptions = false
     @State private var sortOrder: SortOrder = .defaultOrder
     
     @State private var showingDetails = false
-    @State private var focusedSymbol = ""
-    
-    enum SortOrder: String {
+    @State private var focusedSymbol = "leaf.fill"
+
+    private enum SortOrder: String {
         case defaultOrder = "Default"
         case name = "Name"
     }
     
-    let layout = [
-        GridItem(.adaptive(minimum: cellWidth), alignment: .top)
+    private let layout = [
+        GridItem(.adaptive(minimum: 100), alignment: .top)
     ]
     
     var body: some View {
@@ -53,12 +53,14 @@ struct ContentView: View {
                     LazyVGrid(columns: layout, spacing: 16) {
                         ForEach(filteredSymbols(searchText), id: \.self) { symbol in
                             Button(action: {
+                                UIApplication.shared.windows.first?.endEditing(true)
                                 focusedSymbol = symbol
                                 withAnimation() {
                                     showingDetails.toggle()
                                 }
                             }) {
-                                SymbolCell(symbol: symbol)
+                                SymbolCell(symbol: symbol, isFocused: false)
+//                                    .matchedGeometryEffect(id: symbol, in: namespace, isSource: !showingDetails)
                             }
                             .buttonStyle(PlainButtonStyle())
                         }
@@ -67,33 +69,8 @@ struct ContentView: View {
                 ZStack {
                     VisualEffectBlur(blurStyle: .systemUltraThinMaterial)
                         .edgesIgnoringSafeArea(.all)
-                    VStack {
-                        VStack(spacing: 0) {
-                            ZStack {
-                                Rectangle()
-                                    .foregroundColor(Color(white: 0.1))
-                                    .frame(width: cellWidth, height: 156)
-                                Image(systemName: focusedSymbol)
-                                    .renderingMode(.original)
-                                    .imageScale(.large)
-                                    .scaleEffect(3.5)
-                            }
-                            ZStack {
-                                Rectangle()
-                                    .foregroundColor(Color(white: 0.9))
-                                    .frame(width: cellWidth, height: 156)
-                                Image(systemName: focusedSymbol)
-                                    .renderingMode(.original)
-                                    .imageScale(.large)
-                                    .scaleEffect(3.5)
-                            }
-                        }
-                        .clipShape(RoundedRectangle(cornerRadius: 32, style: .continuous))
-                        Text(focusedSymbol)
-                            .font(.largeTitle)
-                            .multilineTextAlignment(.center)
-                            .frame(width: cellWidth * 2)
-                    }
+                    SymbolCell(symbol: focusedSymbol, isFocused: true)
+//                        .matchedGeometryEffect(id: focusedSymbol, in: namespace, isSource: showingDetails)
                 }
                 .opacity(showingDetails ? 1 : 0)
                 .onTapGesture {
@@ -125,7 +102,7 @@ struct ContentView: View {
         }
     }
     
-    func filteredSymbols(_ searchText: String) -> [String] {
+    private func filteredSymbols(_ searchText: String) -> [String] {
         var filteredSymbols = symbols()
         if !searchText.isEmpty {
             filteredSymbols = symbols().filter { $0.lowercased().contains(searchText.lowercased()) }
@@ -133,49 +110,19 @@ struct ContentView: View {
         return filteredSymbols
     }
     
-    func symbols() -> [String] {
+    private func symbols() -> [String] {
         return sortOrder == .defaultOrder ? symbolsSortedByDefault : symbolsSortedByName
+    }
+    
+    private func isMulticolor(symbol: String) -> Bool {
+        return multicolorSymbols.contains(symbol)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-        //            .colorScheme(.dark)
     }
 }
 
-struct SymbolCell: View {
-    let symbol: String
-    
-    var body: some View {
-        VStack {
-            HStack(spacing: 0) {
-                ZStack {
-                    Rectangle()
-                        .foregroundColor(Color(white: 0.1))
-                        .frame(width: cellWidth/2, height: 78)
-                    Image(systemName: symbol)
-                        .renderingMode(.original)
-                        .imageScale(.large)
-                        .scaleEffect(1.75)
-                }
-                ZStack {
-                    Rectangle()
-                        .foregroundColor(Color(white: 0.9))
-                        .frame(width: cellWidth/2, height: 78)
-                    Image(systemName: symbol)
-                        .renderingMode(.original)
-                        .imageScale(.large)
-                        .scaleEffect(1.75)
-                }
-            }
-            .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
-            Text(symbol)
-                .font(.caption)
-                .multilineTextAlignment(.center)
-                .lineLimit(2)
-                .frame(width: cellWidth)
-        }
-    }
-}
+

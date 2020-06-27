@@ -1,5 +1,5 @@
 //
-//  SFSymbols.swift
+//  SFSymbolsApp.swift
 //  sfsymbols
 //
 //  Created by An Trinh on 9/9/19.
@@ -9,7 +9,7 @@
 import SwiftUI
 
 @main
-struct SFSymbols: App {
+struct SFSymbolsApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
