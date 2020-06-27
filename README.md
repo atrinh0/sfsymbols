@@ -7,22 +7,21 @@
     <img src="https://img.shields.io/badge/SF Symbols (last exported)-Version 2.0 (34) beta-lightgray.svg" />
 </p>
  
- 
-<h1>SF Symbols (SwiftUI App)</h1>
+# SF Symbols (SwiftUI App)
 > Experimenting with SwiftUI whilst creating a practical app to browse the SF Symbols via an iOS/iPadOS app.
 
 ### Grid
-<img src="images/grid.png" width="60%">
+<img src="images/grid.png" width="50%">
 
 ### Filter
-<img src="images/filter.png" width="60%">
+<img src="images/filter.png" width="50%">
 
 ### Show only multicolored symbols
-<img src="images/colors.png" width="60%">
-<img src="images/colors2.png" width="60%">
+<img src="images/colors.png" width="50%">
+<img src="images/colors2.png" width="50%">
 
 ### Enlarge
-<img src="images/enlarge.png" width="60%">
+<img src="images/enlarge.png" width="50%">
 
 
 ### Known issues
@@ -34,7 +33,7 @@ According to an Apple Frameworks Engineer, multicolor symbols are not supported 
 
 **Dynamic text sizing affects colors**
 
-<img src="images/bug.gif" width="60%">
+<img src="images/bug.gif" width="50%">
 
 **First enlarge is empty**
 
