@@ -21,6 +21,7 @@ struct SymbolCell: View {
                 if isMulticolor {
                     #warning("🧐 Workaround for multicolor not coloring when setting font size")
                     #warning("🤔 Note that dynamic text size also affects colors (default being most successful)")
+                    #warning("💭 Also iPhone 11 simulator appears to be more successful than the other devices")
                     Image(systemName: symbol)
                         .renderingMode(.original)
                         .imageScale(.large)
