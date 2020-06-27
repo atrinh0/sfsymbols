@@ -59,11 +59,11 @@
 		FC1E55D32326D576003052AD /* sfsymbols */ = {
 			isa = PBXGroup;
 			children = (
-				FCCE85F824A7787900781703 /* Supporting files */,
+				FCCE85FF24A7A2E200781703 /* Components */,
 				FC1E55D42326D576003052AD /* SFSymbolsApp.swift */,
 				FC1E55D82326D576003052AD /* SymbolsListView.swift */,
-				FCCE85FB24A7796D00781703 /* SymbolCell.swift */,
 				FCCE85FD24A79B5C00781703 /* DetailsView.swift */,
+				FCCE85F824A7787900781703 /* Supporting files */,
 			);
 			path = sfsymbols;
 			sourceTree = "<group>";
@@ -86,6 +86,14 @@
 				FC1E55DA2326D578003052AD /* Assets.xcassets */,
 			);
 			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		FCCE85FF24A7A2E200781703 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FCCE85FB24A7796D00781703 /* SymbolCell.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
