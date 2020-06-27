@@ -6,7 +6,8 @@
     <img src="https://img.shields.io/badge/Swift-5.3-orange.svg" />
     <img src="https://img.shields.io/badge/SF Symbols (last exported)-Version 2.0 (34) beta-lightgray.svg" />
 </p>
-
+ 
+ 
 #SF Symbols (SwiftUI App)
 > Experimenting with SwiftUI whilst creating a practical app to browse the SF Symbols via an iOS/iPadOS app.
 
@@ -38,6 +39,10 @@ According to an Apple Frameworks Engineer, multicolor symbols are not supported 
 **First enlarge is empty**
 
 Tapping a symbol to enlarge is not working for the very first time.
+
+**Multicolor symbols appear fuzzy**
+
+Altering the symbols via `font` or `resizable` loses the colors, `scaleEffect` is used for now until there is official support for iOS.
 
 
 ### Disclaimer
