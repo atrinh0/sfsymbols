@@ -20,6 +20,7 @@ struct SymbolsListView: View {
     private enum SortOrder: String {
         case defaultOrder = "Default"
         case name = "Name"
+        case multicolored = "Multicolored"
     }
     
     private let layout = [
@@ -82,6 +83,7 @@ struct SymbolsListView: View {
             ActionSheet(title: Text("Sort by"), message: nil, buttons: [
                 .default(Text("Default"), action: { sortOrder = .defaultOrder }),
                 .default(Text("Name"), action: { sortOrder = .name }),
+                .default(Text("Multicolored"), action: { sortOrder = .multicolored }),
                 .cancel()
             ]
             )
@@ -98,7 +100,14 @@ struct SymbolsListView: View {
     }
     
     private func symbols() -> [String] {
-        return sortOrder == .defaultOrder ? symbolsSortedByDefault : symbolsSortedByName
+        switch sortOrder {
+        case .defaultOrder:
+            return symbolsSortedByDefault
+        case .name:
+            return symbolsSortedByName
+        case .multicolored:
+            return multicolorSymbols
+        }
     }
     
     private func isMulticolor(symbol: String) -> Bool {
