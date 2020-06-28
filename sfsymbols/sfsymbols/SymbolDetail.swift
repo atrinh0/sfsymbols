@@ -1,5 +1,5 @@
 //
-//  DetailsView.swift
+//  SymbolDetail.swift
 //  sfsymbols
 //
 //  Created by An Trinh on 27/6/20.
@@ -8,9 +8,9 @@
 
 import SwiftUI
 
-struct DetailsView: View {
+struct SymbolDetail: View {
     @Binding var showingDetails: Bool
-    let symbol: String
+    let symbol: Symbol
     
     var body: some View {
         VStack {
@@ -35,6 +35,6 @@ struct DetailsView: View {
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailsView(showingDetails: .constant(true), symbol: "leaf.fill")
+        SymbolDetail(showingDetails: .constant(true), symbol: Symbol(name: "leaf.fill", isMulticolored: true))
     }
 }

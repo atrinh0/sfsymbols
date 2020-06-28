@@ -8,25 +8,33 @@
 
 /* Begin PBXBuildFile section */
 		FC1E55D52326D576003052AD /* SFSymbolsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1E55D42326D576003052AD /* SFSymbolsApp.swift */; };
-		FC1E55D92326D576003052AD /* SymbolsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1E55D82326D576003052AD /* SymbolsListView.swift */; };
+		FC1E55D92326D576003052AD /* SymbolList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1E55D82326D576003052AD /* SymbolList.swift */; };
 		FC1E55DB2326D578003052AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC1E55DA2326D578003052AD /* Assets.xcassets */; };
 		FC1E55DE2326D578003052AD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC1E55DD2326D578003052AD /* Preview Assets.xcassets */; };
-		FC1E56052326D6BC003052AD /* Symbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1E56042326D6BC003052AD /* Symbols.swift */; };
+		FC9FF79024A90B6200D69C8E /* SymbolModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9FF78F24A90B6200D69C8E /* SymbolModel.swift */; };
+		FC9FF79324A9115700D69C8E /* SymbolsSortedByDefault.txt in Resources */ = {isa = PBXBuildFile; fileRef = FC9FF79224A9115700D69C8E /* SymbolsSortedByDefault.txt */; };
+		FC9FF79524A913E500D69C8E /* SymbolsSortedByName.txt in Resources */ = {isa = PBXBuildFile; fileRef = FC9FF79424A913E500D69C8E /* SymbolsSortedByName.txt */; };
+		FC9FF79724A9142A00D69C8E /* MulticolorSymbols.txt in Resources */ = {isa = PBXBuildFile; fileRef = FC9FF79624A9142A00D69C8E /* MulticolorSymbols.txt */; };
 		FCCE85FC24A7796D00781703 /* SymbolCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCE85FB24A7796D00781703 /* SymbolCell.swift */; };
-		FCCE85FE24A79B5C00781703 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCE85FD24A79B5C00781703 /* DetailsView.swift */; };
+		FCCE85FE24A79B5C00781703 /* SymbolDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCE85FD24A79B5C00781703 /* SymbolDetail.swift */; };
+		FCCE860224A909DB00781703 /* Symbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCE860124A909DB00781703 /* Symbol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FC1E55D12326D576003052AD /* sfsymbols.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sfsymbols.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC1E55D42326D576003052AD /* SFSymbolsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbolsApp.swift; sourceTree = "<group>"; };
-		FC1E55D82326D576003052AD /* SymbolsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolsListView.swift; sourceTree = "<group>"; };
+		FC1E55D82326D576003052AD /* SymbolList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolList.swift; sourceTree = "<group>"; };
 		FC1E55DA2326D578003052AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC1E55DD2326D578003052AD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FC1E55E22326D578003052AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FC1E56042326D6BC003052AD /* Symbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbols.swift; sourceTree = "<group>"; };
 		FC5617982331A04E00CE22D3 /* sfsymbols.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = sfsymbols.entitlements; sourceTree = "<group>"; };
+		FC9FF78F24A90B6200D69C8E /* SymbolModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolModel.swift; sourceTree = "<group>"; };
+		FC9FF79224A9115700D69C8E /* SymbolsSortedByDefault.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = SymbolsSortedByDefault.txt; sourceTree = "<group>"; };
+		FC9FF79424A913E500D69C8E /* SymbolsSortedByName.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = SymbolsSortedByName.txt; sourceTree = "<group>"; };
+		FC9FF79624A9142A00D69C8E /* MulticolorSymbols.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = MulticolorSymbols.txt; sourceTree = "<group>"; };
 		FCCE85FB24A7796D00781703 /* SymbolCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolCell.swift; sourceTree = "<group>"; };
-		FCCE85FD24A79B5C00781703 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
+		FCCE85FD24A79B5C00781703 /* SymbolDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolDetail.swift; sourceTree = "<group>"; };
+		FCCE860124A909DB00781703 /* Symbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,10 +67,11 @@
 		FC1E55D32326D576003052AD /* sfsymbols */ = {
 			isa = PBXGroup;
 			children = (
+				FCCE860024A909C100781703 /* Model */,
 				FCCE85FF24A7A2E200781703 /* Components */,
 				FC1E55D42326D576003052AD /* SFSymbolsApp.swift */,
-				FC1E55D82326D576003052AD /* SymbolsListView.swift */,
-				FCCE85FD24A79B5C00781703 /* DetailsView.swift */,
+				FC1E55D82326D576003052AD /* SymbolList.swift */,
+				FCCE85FD24A79B5C00781703 /* SymbolDetail.swift */,
 				FCCE85F824A7787900781703 /* Supporting files */,
 			);
 			path = sfsymbols;
@@ -76,11 +85,20 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		FC9FF79124A9112A00D69C8E /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				FC9FF79224A9115700D69C8E /* SymbolsSortedByDefault.txt */,
+				FC9FF79424A913E500D69C8E /* SymbolsSortedByName.txt */,
+				FC9FF79624A9142A00D69C8E /* MulticolorSymbols.txt */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		FCCE85F824A7787900781703 /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
 				FC1E55DC2326D578003052AD /* Preview Content */,
-				FC1E56042326D6BC003052AD /* Symbols.swift */,
 				FC5617982331A04E00CE22D3 /* sfsymbols.entitlements */,
 				FC1E55E22326D578003052AD /* Info.plist */,
 				FC1E55DA2326D578003052AD /* Assets.xcassets */,
@@ -94,6 +112,16 @@
 				FCCE85FB24A7796D00781703 /* SymbolCell.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		FCCE860024A909C100781703 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FC9FF79124A9112A00D69C8E /* Data */,
+				FC9FF78F24A90B6200D69C8E /* SymbolModel.swift */,
+				FCCE860124A909DB00781703 /* Symbol.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +182,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC9FF79324A9115700D69C8E /* SymbolsSortedByDefault.txt in Resources */,
+				FC9FF79724A9142A00D69C8E /* MulticolorSymbols.txt in Resources */,
+				FC9FF79524A913E500D69C8E /* SymbolsSortedByName.txt in Resources */,
 				FC1E55DE2326D578003052AD /* Preview Assets.xcassets in Resources */,
 				FC1E55DB2326D578003052AD /* Assets.xcassets in Resources */,
 			);
@@ -167,10 +198,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC1E55D52326D576003052AD /* SFSymbolsApp.swift in Sources */,
+				FCCE860224A909DB00781703 /* Symbol.swift in Sources */,
 				FCCE85FC24A7796D00781703 /* SymbolCell.swift in Sources */,
-				FC1E56052326D6BC003052AD /* Symbols.swift in Sources */,
-				FCCE85FE24A79B5C00781703 /* DetailsView.swift in Sources */,
-				FC1E55D92326D576003052AD /* SymbolsListView.swift in Sources */,
+				FCCE85FE24A79B5C00781703 /* SymbolDetail.swift in Sources */,
+				FC9FF79024A90B6200D69C8E /* SymbolModel.swift in Sources */,
+				FC1E55D92326D576003052AD /* SymbolList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

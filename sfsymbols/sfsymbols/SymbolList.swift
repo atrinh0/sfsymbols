@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  SymbolList.swift
 //  sfsymbols
 //
 //  Created by An Trinh on 9/9/19.
@@ -8,21 +8,17 @@
 
 import SwiftUI
 
-struct SymbolsListView: View {
+struct SymbolList: View {
+    @EnvironmentObject private var model: SymbolModel
+    
     @State private var searchText = ""
     
     @State private var showSortOptions = false
     @State private var sortOrder: SortOrder = .defaultOrder
     
     @State private var showingDetails = false
-    @State private var focusedSymbol = ""
+    @State private var focusedSymbol: Symbol?
 
-    private enum SortOrder: String {
-        case defaultOrder = "Default"
-        case name = "Name"
-        case multicolored = "Multicolored"
-    }
-    
     private let layout = [
         GridItem(.adaptive(minimum: 100), alignment: .top)
     ]
@@ -77,7 +73,9 @@ struct SymbolsListView: View {
             }
         }
         .sheet(isPresented: $showingDetails) {
-            DetailsView(showingDetails: $showingDetails, symbol: focusedSymbol)
+            if let focusedSymbol = focusedSymbol {
+                SymbolDetail(showingDetails: $showingDetails, symbol: focusedSymbol)
+            }
         }
         .actionSheet(isPresented: $showSortOptions) {
             ActionSheet(title: Text("Sort by"), message: nil, buttons: [
@@ -91,33 +89,18 @@ struct SymbolsListView: View {
         .navigationViewStyle(StackNavigationViewStyle())
     }
     
-    private func filteredSymbols(_ searchText: String) -> [String] {
-        var filteredSymbols = symbols()
+    private func filteredSymbols(_ searchText: String) -> [Symbol] {
+        var filteredSymbols = model.symbols(for: sortOrder)
         if !searchText.isEmpty {
-            filteredSymbols = symbols().filter { $0.lowercased().contains(searchText.lowercased()) }
+            filteredSymbols = filteredSymbols.filter { $0.name.lowercased().contains(searchText.lowercased()) }
         }
         return filteredSymbols
-    }
-    
-    private func symbols() -> [String] {
-        switch sortOrder {
-        case .defaultOrder:
-            return symbolsSortedByDefault
-        case .name:
-            return symbolsSortedByName
-        case .multicolored:
-            return multicolorSymbols
-        }
-    }
-    
-    private func isMulticolor(symbol: String) -> Bool {
-        return multicolorSymbols.contains(symbol)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        SymbolsListView()
+        SymbolList()
     }
 }
 
