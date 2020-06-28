@@ -16,9 +16,7 @@ struct SymbolDetail: View {
         VStack {
             HStack {
                 Spacer()
-                Button(action: {
-                    showingDetails = false
-                }) {
+                Button(action: { showingDetails = false }) {
                     Image(systemName: "xmark.circle.fill")
                         .font(Font.title.bold())
                         .imageScale(.large)

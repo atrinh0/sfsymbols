@@ -12,10 +12,8 @@ struct SymbolList: View {
     @EnvironmentObject private var model: SymbolModel
     
     @State private var searchText = ""
-    
     @State private var showSortOptions = false
     @State private var sortOrder: SortOrder = .defaultOrder
-    
     @State private var showingDetails = false
     @State private var focusedSymbol: Symbol?
 
@@ -27,31 +25,10 @@ struct SymbolList: View {
         NavigationView {
             ZStack {
                 ScrollView {
-                    HStack {
-                        TextField("Search", text: $searchText)
-                            .disableAutocorrection(true)
-                            .foregroundColor(Color.primary)
-                            .frame(height: 50)
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
-                        if !searchText.isEmpty {
-                            Button(action: {
-                                searchText = ""
-                                UIApplication.shared.windows.first?.endEditing(true)
-                            }) {
-                                Image(systemName: "xmark.circle.fill")
-                                    .imageScale(.large)
-                                    .foregroundColor(Color.primary)
-                            }
-                        }
-                    }
-                    .padding(.horizontal)
+                    searchBar
                     LazyVGrid(columns: layout, spacing: 16) {
                         ForEach(filteredSymbols(searchText), id: \.self) { symbol in
-                            Button(action: {
-                                UIApplication.shared.windows.first?.endEditing(true)
-                                focusedSymbol = symbol
-                                showingDetails = true
-                            }) {
+                            Button(action: { select(symbol) }) {
                                 SymbolCell(symbol: symbol, isFocused: false)
                             }
                             .buttonStyle(PlainButtonStyle())
@@ -62,9 +39,7 @@ struct SymbolList: View {
             .navigationBarTitle("SF Symbols", displayMode: .automatic)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: {
-                        showSortOptions.toggle()
-                    }) {
+                    Button(action: { showSortOptions.toggle() }) {
                         Image(systemName: "line.horizontal.3.decrease")
                             .imageScale(.large)
                             .padding()
@@ -89,12 +64,39 @@ struct SymbolList: View {
         .navigationViewStyle(StackNavigationViewStyle())
     }
     
+    var searchBar: some View {
+        HStack {
+            TextField("Search", text: $searchText)
+                .disableAutocorrection(true)
+                .foregroundColor(Color.primary)
+                .frame(height: 50)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+            if !searchText.isEmpty {
+                Button(action: {
+                    searchText = ""
+                    UIApplication.shared.windows.first?.endEditing(true)
+                }) {
+                    Image(systemName: "xmark.circle.fill")
+                        .imageScale(.large)
+                        .foregroundColor(Color.primary)
+                }
+            }
+        }
+        .padding(.horizontal)
+    }
+    
     private func filteredSymbols(_ searchText: String) -> [Symbol] {
         var filteredSymbols = model.symbols(for: sortOrder)
         if !searchText.isEmpty {
             filteredSymbols = filteredSymbols.filter { $0.name.lowercased().contains(searchText.lowercased()) }
         }
         return filteredSymbols
+    }
+    
+    private func select(_ symbol: Symbol) {
+        UIApplication.shared.windows.first?.endEditing(true)
+        focusedSymbol = symbol
+        showingDetails = true
     }
 }
 
