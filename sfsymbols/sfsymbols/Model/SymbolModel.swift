@@ -18,6 +18,8 @@ class SymbolModel: ObservableObject {
     private var symbolsSortedByDefault: [String] = []
     private var symbolsSortedByName: [String] = []
     private var multicolorSymbols: [String] = []
+    
+    @Published var selectedSymbol: Symbol = Symbol(name: "leaf.fill", isMulticolored: true)
 
     init() {
         loadSymbols()
@@ -31,6 +33,10 @@ class SymbolModel: ObservableObject {
         case .multicolored: symbols = multicolorSymbols
         }
         return symbols.map { Symbol(name: $0, isMulticolored: multicolorSymbols.contains($0)) }
+    }
+    
+    func select(_ symbol: Symbol) {
+        selectedSymbol = symbol
     }
 }
 

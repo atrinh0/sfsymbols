@@ -35,10 +35,6 @@ According to an Apple Frameworks Engineer, multicolor symbols are not supported 
 
 <img src="images/bug.gif" width="50%">
 
-**First enlarge is empty**
-
-Tapping a symbol to enlarge is not working for the very first time.
-
 **Multicolor symbols appear fuzzy**
 
 Altering the symbols via `font` or `resizable` loses the colors, `scaleEffect` is used for now until there is official support for iOS.

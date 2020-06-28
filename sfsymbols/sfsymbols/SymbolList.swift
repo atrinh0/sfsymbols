@@ -15,7 +15,6 @@ struct SymbolList: View {
     @State private var showSortOptions = false
     @State private var sortOrder: SortOrder = .defaultOrder
     @State private var showingDetails = false
-    @State private var focusedSymbol: Symbol?
 
     private let layout = [
         GridItem(.adaptive(minimum: 100), alignment: .top)
@@ -48,9 +47,8 @@ struct SymbolList: View {
             }
         }
         .sheet(isPresented: $showingDetails) {
-            if let focusedSymbol = focusedSymbol {
-                SymbolDetail(showingDetails: $showingDetails, symbol: focusedSymbol)
-            }
+            SymbolDetail(showingDetails: $showingDetails)
+                .environmentObject(model)
         }
         .actionSheet(isPresented: $showSortOptions) {
             ActionSheet(title: Text("Sort by"), message: nil, buttons: [
@@ -95,7 +93,7 @@ struct SymbolList: View {
     
     private func select(_ symbol: Symbol) {
         UIApplication.shared.windows.first?.endEditing(true)
-        focusedSymbol = symbol
+        model.select(symbol)
         showingDetails = true
     }
 }

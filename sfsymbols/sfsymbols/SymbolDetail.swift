@@ -9,8 +9,8 @@
 import SwiftUI
 
 struct SymbolDetail: View {
+    @EnvironmentObject private var model: SymbolModel
     @Binding var showingDetails: Bool
-    let symbol: Symbol
     
     var body: some View {
         VStack {
@@ -25,7 +25,7 @@ struct SymbolDetail: View {
                 }
             }
             Spacer()
-            SymbolCell(symbol: symbol, isFocused: true)
+            SymbolCell(symbol: model.selectedSymbol, isFocused: true)
             Spacer()
         }
     }
@@ -33,6 +33,7 @@ struct SymbolDetail: View {
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        SymbolDetail(showingDetails: .constant(true), symbol: Symbol(name: "leaf.fill", isMulticolored: true))
+        SymbolDetail(showingDetails: .constant(true))
+            .environmentObject(SymbolModel())
     }
 }
