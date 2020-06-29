@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct SymbolDetail: View {
-    @EnvironmentObject private var model: SymbolModel
+    @ObservedObject var model: SymbolModel
     @Binding var showingDetails: Bool
     
     var body: some View {
@@ -33,7 +33,6 @@ struct SymbolDetail: View {
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        SymbolDetail(showingDetails: .constant(true))
-            .environmentObject(SymbolModel())
+        SymbolDetail(model: SymbolModel(), showingDetails: .constant(true))
     }
 }

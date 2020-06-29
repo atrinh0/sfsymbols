@@ -14,8 +14,7 @@ struct SFSymbolsApp: App {
     
     var body: some Scene {
         WindowGroup {
-            SymbolList()
-                .environmentObject(model)
+            SymbolList(model: model)
         }
     }
 }

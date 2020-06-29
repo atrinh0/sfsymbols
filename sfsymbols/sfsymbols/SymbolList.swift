@@ -11,7 +11,7 @@ import UIKit
 import CoreHaptics
 
 struct SymbolList: View {
-    @EnvironmentObject private var model: SymbolModel
+    @ObservedObject var model: SymbolModel
     
     @State private var searchText = ""
     @State private var showSortOptions = false
@@ -57,8 +57,7 @@ struct SymbolList: View {
             }
         }
         .sheet(isPresented: $showingDetails) {
-            SymbolDetail(showingDetails: $showingDetails)
-                .environmentObject(model)
+            SymbolDetail(model: model, showingDetails: $showingDetails)
         }
         .actionSheet(isPresented: $showSortOptions) {
             ActionSheet(title: Text("Sort by"), message: nil, buttons: [
@@ -112,8 +111,7 @@ struct SymbolList: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        SymbolList()
-            .environmentObject(SymbolModel())
+        SymbolList(model: SymbolModel())
     }
 }
 
