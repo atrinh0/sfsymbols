@@ -7,6 +7,8 @@
 //
 
 import SwiftUI
+import UIKit
+import CoreHaptics
 
 struct SymbolList: View {
     @EnvironmentObject private var model: SymbolModel
@@ -20,11 +22,19 @@ struct SymbolList: View {
         GridItem(.adaptive(minimum: 100), alignment: .top)
     ]
     
+    var pluralizer: String { filteredSymbols(searchText).count == 1 ? "" : "s" }
+    
     var body: some View {
         NavigationView {
             ZStack {
                 ScrollView {
                     searchBar
+                    HStack {
+                        Text("\(filteredSymbols(searchText).count) symbol\(pluralizer)")
+                            .font(.subheadline)
+                            .fontWeight(.semibold)
+                            .foregroundColor(.secondary)
+                    }
                     LazyVGrid(columns: layout, spacing: 16) {
                         ForEach(filteredSymbols(searchText), id: \.self) { symbol in
                             Button(action: { select(symbol) }) {
@@ -84,17 +94,19 @@ struct SymbolList: View {
     }
     
     private func filteredSymbols(_ searchText: String) -> [Symbol] {
-        var filteredSymbols = model.symbols(for: sortOrder)
-        if !searchText.isEmpty {
-            filteredSymbols = filteredSymbols.filter { $0.name.lowercased().contains(searchText.lowercased()) }
-        }
-        return filteredSymbols
+        return model.symbols(for: sortOrder, filter: searchText)
     }
     
     private func select(_ symbol: Symbol) {
         UIApplication.shared.windows.first?.endEditing(true)
         model.select(symbol)
+        hapticBump()
         showingDetails = true
+    }
+    
+    private func hapticBump() {
+        let generator = UIImpactFeedbackGenerator(style: .light)
+        generator.impactOccurred()
     }
 }
 

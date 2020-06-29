@@ -25,14 +25,20 @@ class SymbolModel: ObservableObject {
         loadSymbols()
     }
     
-    func symbols(for sortOrder: SortOrder) -> [Symbol] {
+    func symbols(for sortOrder: SortOrder, filter: String) -> [Symbol] {
         var symbols: [String] = []
         switch sortOrder {
         case .defaultOrder: symbols = symbolsSortedByDefault
         case .name: symbols = symbolsSortedByName
         case .multicolored: symbols = multicolorSymbols
         }
-        return symbols.map { Symbol(name: $0, isMulticolored: multicolorSymbols.contains($0)) }
+        return symbols.compactMap {
+            if filter.isEmpty || $0.lowercased().contains(filter.lowercased()) {
+                return Symbol(name: $0, isMulticolored: multicolorSymbols.contains($0))
+            } else {
+                return nil
+            }
+        }
     }
     
     func select(_ symbol: Symbol) {
