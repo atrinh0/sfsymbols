@@ -14,10 +14,9 @@ struct SymbolList: View {
     @ObservedObject var model: SymbolModel
     
     @State private var searchText = ""
-    @State private var showSortOptions = false
     @State private var sortOrder: SortOrder = .defaultOrder
     @State private var showingDetails = false
-
+    
     private let layout = [
         GridItem(.adaptive(minimum: 100), alignment: .top)
     ]
@@ -39,6 +38,14 @@ struct SymbolList: View {
                         ForEach(filteredSymbols(searchText), id: \.self) { symbol in
                             Button(action: { select(symbol) }) {
                                 SymbolCell(symbol: symbol, isFocused: false)
+                                    .contextMenu {
+                                        Button(action: {
+                                            select(symbol)
+                                        }) {
+                                            Text("Enlarge")
+                                            Image(systemName: "arrow.up.left.and.down.right.and.arrow.up.right.and.down.left")
+                                        }
+                                    }
                             }
                             .buttonStyle(PlainButtonStyle())
                         }
@@ -48,25 +55,24 @@ struct SymbolList: View {
             .navigationBarTitle("SF Symbols", displayMode: .automatic)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: { showSortOptions.toggle() }) {
-                        Image(systemName: "line.horizontal.3.decrease")
+                    Menu() {
+                        Menu("Sort...") {
+                            Button("By Default", action: { sortOrder = .defaultOrder })
+                            Button("By Name", action: { sortOrder = .name })
+                        }
+                        Button("Multicolored Only", action: { sortOrder = .multicolored })
+                    }
+                    label: {
+                        Image(systemName: "line.horizontal.3.decrease.circle.fill")
+                            .font(Font.title2.bold())
                             .imageScale(.large)
-                            .padding()
+                            .foregroundColor(Color.primary.opacity(0.7))
                     }
                 }
             }
         }
         .sheet(isPresented: $showingDetails) {
             SymbolDetail(model: model, showingDetails: $showingDetails)
-        }
-        .actionSheet(isPresented: $showSortOptions) {
-            ActionSheet(title: Text("Sort by"), message: nil, buttons: [
-                .default(Text("Default"), action: { sortOrder = .defaultOrder }),
-                .default(Text("Name"), action: { sortOrder = .name }),
-                .default(Text("Multicolored"), action: { sortOrder = .multicolored }),
-                .cancel()
-            ]
-            )
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }
