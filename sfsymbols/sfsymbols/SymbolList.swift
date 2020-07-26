@@ -56,11 +56,30 @@ struct SymbolList: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Menu() {
-                        Menu("Sort...") {
-                            Button("By Default", action: { sortOrder = .defaultOrder })
-                            Button("By Name", action: { sortOrder = .name })
+                        Button(action: { sortOrder = .defaultOrder }) {
+                            Text("Sorted by Default")
+                            if sortOrder == .defaultOrder {
+                                Image(systemName: "checkmark")
+                                    .font(Font.body.bold())
+                                    .foregroundColor(Color.primary.opacity(0.7))
+                            }
                         }
-                        Button("Multicolored Only", action: { sortOrder = .multicolored })
+                        Button(action: { sortOrder = .name }) {
+                            Text("Sorted by Name")
+                            if sortOrder == .name {
+                                Image(systemName: "checkmark")
+                                    .font(Font.body.bold())
+                                    .foregroundColor(Color.primary.opacity(0.7))
+                            }
+                        }
+                        Button(action: { sortOrder = .multicolored }) {
+                            Text("Multicolored Only")
+                            if sortOrder == .multicolored {
+                                Image(systemName: "checkmark")
+                                    .font(Font.body.bold())
+                                    .foregroundColor(Color.primary.opacity(0.7))
+                            }
+                        }
                     }
                     label: {
                         Image(systemName: "line.horizontal.3.decrease.circle.fill")
