@@ -8,10 +8,10 @@
 
 import SwiftUI
 
-enum SortOrder {
-    case defaultOrder
-    case name
-    case multicolored
+enum SortOrder: String, CaseIterable {
+    case defaultOrder = "Sorted by Default"
+    case name = "Sorted by Name"
+    case multicolored = "Multicolored Only"
 }
 
 class SymbolModel: ObservableObject {

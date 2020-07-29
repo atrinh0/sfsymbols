@@ -56,28 +56,14 @@ struct SymbolList: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Menu() {
-                        Button(action: { sortOrder = .defaultOrder }) {
-                            Text("Sorted by Default")
-                            if sortOrder == .defaultOrder {
-                                Image(systemName: "checkmark")
-                                    .font(Font.body.bold())
-                                    .foregroundColor(Color.primary.opacity(0.7))
-                            }
-                        }
-                        Button(action: { sortOrder = .name }) {
-                            Text("Sorted by Name")
-                            if sortOrder == .name {
-                                Image(systemName: "checkmark")
-                                    .font(Font.body.bold())
-                                    .foregroundColor(Color.primary.opacity(0.7))
-                            }
-                        }
-                        Button(action: { sortOrder = .multicolored }) {
-                            Text("Multicolored Only")
-                            if sortOrder == .multicolored {
-                                Image(systemName: "checkmark")
-                                    .font(Font.body.bold())
-                                    .foregroundColor(Color.primary.opacity(0.7))
+                        ForEach(SortOrder.allCases, id: \.self) { order in
+                            Button(action: { sortOrder = order }) {
+                                Text(order.rawValue)
+                                if sortOrder == order {
+                                    Image(systemName: "checkmark")
+                                        .font(Font.body.bold())
+                                        .foregroundColor(Color.primary.opacity(0.7))
+                                }
                             }
                         }
                     }
