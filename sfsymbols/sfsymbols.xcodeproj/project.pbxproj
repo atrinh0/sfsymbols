@@ -15,6 +15,7 @@
 		FC9FF79324A9115700D69C8E /* SymbolsSortedByDefault.txt in Resources */ = {isa = PBXBuildFile; fileRef = FC9FF79224A9115700D69C8E /* SymbolsSortedByDefault.txt */; };
 		FC9FF79524A913E500D69C8E /* SymbolsSortedByName.txt in Resources */ = {isa = PBXBuildFile; fileRef = FC9FF79424A913E500D69C8E /* SymbolsSortedByName.txt */; };
 		FC9FF79724A9142A00D69C8E /* MulticolorSymbols.txt in Resources */ = {isa = PBXBuildFile; fileRef = FC9FF79624A9142A00D69C8E /* MulticolorSymbols.txt */; };
+		FCAEB4DB24D36478008D6C05 /* NavButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAEB4DA24D36478008D6C05 /* NavButtonStyle.swift */; };
 		FCCE85FC24A7796D00781703 /* SymbolCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCE85FB24A7796D00781703 /* SymbolCell.swift */; };
 		FCCE85FE24A79B5C00781703 /* SymbolDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCE85FD24A79B5C00781703 /* SymbolDetail.swift */; };
 		FCCE860224A909DB00781703 /* Symbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCE860124A909DB00781703 /* Symbol.swift */; };
@@ -32,6 +33,7 @@
 		FC9FF79224A9115700D69C8E /* SymbolsSortedByDefault.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = SymbolsSortedByDefault.txt; sourceTree = "<group>"; };
 		FC9FF79424A913E500D69C8E /* SymbolsSortedByName.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = SymbolsSortedByName.txt; sourceTree = "<group>"; };
 		FC9FF79624A9142A00D69C8E /* MulticolorSymbols.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = MulticolorSymbols.txt; sourceTree = "<group>"; };
+		FCAEB4DA24D36478008D6C05 /* NavButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavButtonStyle.swift; sourceTree = "<group>"; };
 		FCCE85FB24A7796D00781703 /* SymbolCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolCell.swift; sourceTree = "<group>"; };
 		FCCE85FD24A79B5C00781703 /* SymbolDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolDetail.swift; sourceTree = "<group>"; };
 		FCCE860124A909DB00781703 /* Symbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbol.swift; sourceTree = "<group>"; };
@@ -95,6 +97,14 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		FCAEB4D924D363F9008D6C05 /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+				FCAEB4DA24D36478008D6C05 /* NavButtonStyle.swift */,
+			);
+			path = ViewModifiers;
+			sourceTree = "<group>";
+		};
 		FCCE85F824A7787900781703 /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +119,7 @@
 		FCCE85FF24A7A2E200781703 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				FCAEB4D924D363F9008D6C05 /* ViewModifiers */,
 				FCCE85FB24A7796D00781703 /* SymbolCell.swift */,
 			);
 			path = Components;
@@ -203,6 +214,7 @@
 				FCCE85FE24A79B5C00781703 /* SymbolDetail.swift in Sources */,
 				FC9FF79024A90B6200D69C8E /* SymbolModel.swift in Sources */,
 				FC1E55D92326D576003052AD /* SymbolList.swift in Sources */,
+				FCAEB4DB24D36478008D6C05 /* NavButtonStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -69,9 +69,7 @@ struct SymbolList: View {
                     }
                     label: {
                         Image(systemName: "line.horizontal.3.decrease.circle.fill")
-                            .font(Font.title2.bold())
-                            .imageScale(.large)
-                            .foregroundColor(Color.primary.opacity(0.7))
+                            .navButtonStyle()
                     }
                 }
             }

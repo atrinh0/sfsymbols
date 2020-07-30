@@ -18,10 +18,8 @@ struct SymbolDetail: View {
                 Spacer()
                 Button(action: { showingDetails = false }) {
                     Image(systemName: "xmark.circle.fill")
-                        .font(Font.title2.bold())
-                        .imageScale(.large)
+                        .navButtonStyle()
                         .padding()
-                        .foregroundColor(Color.primary.opacity(0.7))
                 }
             }
             Spacer()
