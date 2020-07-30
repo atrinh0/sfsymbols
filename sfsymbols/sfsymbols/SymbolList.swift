@@ -96,6 +96,7 @@ struct SymbolList: View {
                         .imageScale(.large)
                         .foregroundColor(Color.primary)
                 }
+                .pressableButton()
             }
         }
         .padding(.horizontal)

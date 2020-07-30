@@ -21,6 +21,7 @@ struct SymbolDetail: View {
                         .navButtonStyle()
                         .padding()
                 }
+                .pressableButton()
             }
             Spacer()
             SymbolCell(symbol: model.selectedSymbol, isFocused: true)

@@ -8,6 +8,8 @@
 
 import SwiftUI
 
+// MARK: - Image
+
 struct NavButton: ViewModifier {
     func body(content: Content) -> some View {
         content
@@ -20,5 +22,21 @@ struct NavButton: ViewModifier {
 extension Image {
     func navButtonStyle() -> some View {
         self.modifier(NavButton())
+    }
+}
+
+// MARK: - Button
+
+struct ButtonPressedStyle: ButtonStyle {
+    func makeBody(configuration: Self.Configuration) -> some View {
+        configuration.label
+            .scaleEffect(configuration.isPressed ? 0.8 : 1.0)
+            .animation(.default)
+    }
+}
+
+extension Button {
+    func pressableButton() -> some View {
+        self.buttonStyle(ButtonPressedStyle())
     }
 }
