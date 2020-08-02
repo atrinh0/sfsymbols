@@ -17,6 +17,8 @@ struct SymbolList: View {
     @State private var sortOrder: SortOrder = .defaultOrder
     @State private var showingDetails = false
     
+    @State private var showingAudit = false
+    
     private let layout = [
         GridItem(.adaptive(minimum: 100), alignment: .top)
     ]
@@ -54,6 +56,17 @@ struct SymbolList: View {
             }
             .navigationBarTitle("SF Symbols", displayMode: .automatic)
             .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Menu() {
+                        Button(action: { showingAudit = true }) {
+                            Text("Run Audit...")
+                        }
+                    }
+                    label: {
+                        Image(systemName: "ellipsis.circle.fill")
+                            .navButtonStyle()
+                    }
+                }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Menu() {
                         ForEach(SortOrder.allCases, id: \.self) { order in
@@ -74,10 +87,14 @@ struct SymbolList: View {
                 }
             }
         }
+        .navigationViewStyle(StackNavigationViewStyle())
         .sheet(isPresented: $showingDetails) {
             SymbolDetail(model: model, showingDetails: $showingDetails)
         }
-        .navigationViewStyle(StackNavigationViewStyle())
+        .background(EmptyView()
+                        .sheet(isPresented: $showingAudit) {
+                            AuditResult(model: model, showingAudit: $showingAudit)
+                        })
     }
     
     var searchBar: some View {

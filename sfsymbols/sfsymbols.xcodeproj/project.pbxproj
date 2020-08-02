@@ -19,6 +19,7 @@
 		FCCE85FC24A7796D00781703 /* SymbolCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCE85FB24A7796D00781703 /* SymbolCell.swift */; };
 		FCCE85FE24A79B5C00781703 /* SymbolDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCE85FD24A79B5C00781703 /* SymbolDetail.swift */; };
 		FCCE860224A909DB00781703 /* Symbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCE860124A909DB00781703 /* Symbol.swift */; };
+		FCD646B724D6C4C4002E1D9C /* AuditResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD646B624D6C4C4002E1D9C /* AuditResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		FCCE85FB24A7796D00781703 /* SymbolCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolCell.swift; sourceTree = "<group>"; };
 		FCCE85FD24A79B5C00781703 /* SymbolDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolDetail.swift; sourceTree = "<group>"; };
 		FCCE860124A909DB00781703 /* Symbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbol.swift; sourceTree = "<group>"; };
+		FCD646B624D6C4C4002E1D9C /* AuditResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuditResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 				FC1E55D42326D576003052AD /* SFSymbolsApp.swift */,
 				FC1E55D82326D576003052AD /* SymbolList.swift */,
 				FCCE85FD24A79B5C00781703 /* SymbolDetail.swift */,
+				FCD646B624D6C4C4002E1D9C /* AuditResult.swift */,
 				FCCE85F824A7787900781703 /* Supporting files */,
 			);
 			path = sfsymbols;
@@ -210,6 +213,7 @@
 			files = (
 				FC1E55D52326D576003052AD /* SFSymbolsApp.swift in Sources */,
 				FCCE860224A909DB00781703 /* Symbol.swift in Sources */,
+				FCD646B724D6C4C4002E1D9C /* AuditResult.swift in Sources */,
 				FCCE85FC24A7796D00781703 /* SymbolCell.swift in Sources */,
 				FCCE85FE24A79B5C00781703 /* SymbolDetail.swift in Sources */,
 				FC9FF79024A90B6200D69C8E /* SymbolModel.swift in Sources */,
