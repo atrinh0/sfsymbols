@@ -10,11 +10,13 @@
 # SF Symbols (SwiftUI App)
 > Experimenting with SwiftUI whilst creating a practical app to browse the SF Symbols via an iOS/iPadOS app.
 
-<img src="images/filter.gif">
+<img src="images/filter2.gif">
 
-<img src="images/sort.gif">
+<img src="images/sort2.gif">
 
-<img src="images/colors.gif">
+<img src="images/audit.gif">
+
+<img src="images/colors2.gif">
 
 ### Known issues
 
