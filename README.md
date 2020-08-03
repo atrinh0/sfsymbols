@@ -4,21 +4,18 @@
     <img src="https://img.shields.io/badge/iOS-14.0+-blue.svg" />
     <img src="https://img.shields.io/badge/Xcode-12.0+-brightgreen.svg" />
     <img src="https://img.shields.io/badge/Swift-5.3-orange.svg" />
+    <img src="https://img.shields.io/badge/SwiftUI-2.0-red.svg" />
     <img src="https://img.shields.io/badge/SF Symbols-Version 2.0 (37) beta-lightgray.svg" />
 </p>
  
-# SF Symbols (SwiftUI App)
-> Experimenting with SwiftUI whilst creating a practical app to browse the SF Symbols via an iOS/iPadOS app.
+# SF Symbols (SwiftUI 2.0 App)
+> Experimenting with `SwiftUI 2.0` whilst creating a practical app to browse the SF Symbols via an iOS/iPadOS app.
 
-<img src="images/filter2.gif">
+<img src="images/filter2.gif"> <img src="images/sort2.gif">
 
-<img src="images/sort2.gif">
+<img src="images/audit.gif"> <img src="images/colors2.gif">
 
-<img src="images/audit.gif">
-
-<img src="images/colors2.gif">
-
-### Known issues
+### 🙊 Known issues
 
 **Limited support**
 
@@ -33,8 +30,7 @@ According to an Apple Frameworks Engineer, multicolor symbols are not supported 
 
 Altering the symbols via `font` or `resizable` loses the colors, `scaleEffect` is used for now until there is official support for iOS.
 
-
-### Disclaimer
+### 👨🏻‍⚖️ Disclaimer
 
 > This is posted as a way to share SwiftUI learnings (and is not production level code). Use it at your own risk.
 
