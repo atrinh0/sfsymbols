@@ -61,6 +61,7 @@ struct SymbolList: View {
                         Button(action: { showingAudit = true }) {
                             Text("Run Audit...")
                         }
+                        Divider()
                     }
                     label: {
                         Image(systemName: "ellipsis.circle.fill")
@@ -141,5 +142,3 @@ struct ContentView_Previews: PreviewProvider {
         SymbolList(model: SymbolModel())
     }
 }
-
-
