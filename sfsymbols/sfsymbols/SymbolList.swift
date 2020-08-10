@@ -56,33 +56,20 @@ struct SymbolList: View {
             }
             .navigationBarTitle("SF Symbols", displayMode: .automatic)
             .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Menu() {
+                ToolbarItem(placement: .primaryAction) {
+                    Menu {
                         Button(action: { showingAudit = true }) {
                             Text("Run Audit...")
                         }
                         Divider()
-                    }
-                    label: {
-                        Image(systemName: "ellipsis.circle.fill")
-                            .navButtonStyle()
-                    }
-                }
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Menu() {
-                        ForEach(SortOrder.allCases, id: \.self) { order in
-                            Button(action: { sortOrder = order }) {
-                                Text(order.rawValue)
-                                if sortOrder == order {
-                                    Image(systemName: "checkmark")
-                                        .font(Font.body.bold())
-                                        .foregroundColor(Color.primary.opacity(0.7))
-                                }
+                        Picker(selection: $sortOrder, label: Text("Sort")) {
+                            ForEach(SortOrder.allCases, id: \.self) { order in
+                                Text(order.rawValue).tag(order)
                             }
                         }
                     }
                     label: {
-                        Image(systemName: "line.horizontal.3.decrease.circle.fill")
+                        Image(systemName: "ellipsis.circle.fill")
                             .navButtonStyle()
                     }
                 }
