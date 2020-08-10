@@ -45,7 +45,7 @@ struct SymbolList: View {
                                             select(symbol)
                                         }) {
                                             Text("Enlarge")
-                                            Image(systemName: "arrow.up.left.and.down.right.and.arrow.up.right.and.down.left")
+                                            Image(systemName: "arrow.up.left.and.arrow.down.right")
                                         }
                                     }
                             }
@@ -111,6 +111,7 @@ struct SymbolList: View {
                     UIApplication.shared.windows.first?.endEditing(true)
                 }) {
                     Image(systemName: "xmark.circle.fill")
+                        .font(Font.body.bold())
                         .imageScale(.large)
                         .foregroundColor(Color.primary)
                 }
