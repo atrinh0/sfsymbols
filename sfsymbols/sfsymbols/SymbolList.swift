@@ -55,25 +55,21 @@ struct SymbolList: View {
                 }
             }
             .navigationBarTitle("SF Symbols", displayMode: .automatic)
-            .toolbar {
-                ToolbarItem(placement: .primaryAction) {
-                    Menu {
-                        Button(action: { showingAudit = true }) {
-                            Text("Run Audit...")
-                        }
-                        Divider()
-                        Picker(selection: $sortOrder, label: Text("Sort")) {
-                            ForEach(SortOrder.allCases, id: \.self) { order in
-                                Text(order.rawValue).tag(order)
-                            }
-                        }
-                    }
-                    label: {
-                        Image(systemName: "ellipsis.circle.fill")
-                            .navButtonStyle()
-                    }
-                }
-            }
+            .navigationBarItems(trailing:
+                                    Menu(content: {
+                                        Button(action: { showingAudit = true }) {
+                                            Text("Run Audit...")
+                                        }
+                                        Divider()
+                                        Picker(selection: $sortOrder, label: Text("Sort")) {
+                                            ForEach(SortOrder.allCases, id: \.self) { order in
+                                                Text(order.rawValue).tag(order)
+                                            }
+                                        }
+                                    }) {
+                                        Image(systemName: "ellipsis.circle.fill")
+                                            .navButtonStyle()
+                                    })
         }
         .navigationViewStyle(StackNavigationViewStyle())
         .sheet(isPresented: $showingDetails) {
