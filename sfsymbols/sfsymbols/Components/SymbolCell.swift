@@ -19,13 +19,10 @@ struct SymbolCell: View {
                     .foregroundColor(Color.secondary.opacity(0.25))
                     .frame(width: isFocused ? 300 : 100, height: isFocused ? 234 : 78)
                 if symbol.isMulticolored {
-                    #warning("🧐 Workaround for multicolor not coloring when setting font size")
-                    #warning("🤔 Note that dynamic text size also affects colors (default being most successful)")
-                    #warning("💭 Also iPhone 11 simulator appears to be more successful than the other devices")
                     Image(systemName: symbol.name)
                         .renderingMode(.original)
                         .imageScale(.large)
-                        .scaleEffect(isFocused ? 5.25 : 1.75)
+                        .font(.system(size: isFocused ? 90 : 30))
                 } else {
                     Image(systemName: symbol.name)
                         .renderingMode(.template)
