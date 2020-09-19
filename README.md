@@ -11,24 +11,7 @@
 # SF Symbols (SwiftUI 2.0 App)
 > Experimenting with `SwiftUI 2.0` whilst creating a practical app to browse the SF Symbols via an iOS/iPadOS app.
 
-<img src="images/filter2.gif"> <img src="images/sort2.gif">
-
-<img src="images/audit.gif"> <img src="images/colors2.gif">
-
-### 🙊 Known issues
-
-**Limited support**
-
-According to an Apple Frameworks Engineer, multicolor symbols are not supported on iOS yet.
-[https://developer.apple.com/forums/thread/651671?answerId=616617022#616617022](https://developer.apple.com/forums/thread/651671?answerId=616617022#616617022)
-
-**Dynamic text sizing affects colors**
-
-<img src="images/bug.gif">
-
-**Multicolor symbols appear fuzzy**
-
-Altering the symbols via `font` or `resizable` loses the colors, `scaleEffect` is used for now until there is official support for iOS.
+<img src="images/search.gif"> <img src="images/sort.gif">
 
 ### 👨🏻‍⚖️ Disclaimer
 
