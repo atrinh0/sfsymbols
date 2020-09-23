@@ -10,13 +10,9 @@ square.grid.3x1.folder.badge.plus
 square.grid.3x1.folder.fill.badge.plus
 paperplane.circle.fill
 externaldrive.badge.plus
-externaldrive.fill.badge.plus
 externaldrive.badge.minus
-externaldrive.fill.badge.minus
 externaldrive.badge.checkmark
-externaldrive.fill.badge.checkmark
 externaldrive.badge.xmark
-externaldrive.fill.badge.xmark
 doc.badge.plus
 doc.fill.badge.plus
 note.text.badge.plus
@@ -34,7 +30,9 @@ bookmark.circle.fill
 link.circle.fill
 link.badge.plus
 person.badge.plus
+person.fill.badge.plus
 person.badge.minus
+person.fill.badge.minus
 person.crop.circle.badge.plus
 person.crop.circle.fill.badge.plus
 person.crop.circle.badge.minus

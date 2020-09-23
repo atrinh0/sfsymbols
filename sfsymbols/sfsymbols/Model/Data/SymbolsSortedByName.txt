@@ -271,6 +271,10 @@ airplane.circle
 airplane.circle.fill
 airplayaudio
 airplayvideo
+airpod.left
+airpod.right
+airpodpro.left
+airpodpro.right
 airpods
 airpodspro
 airport.express
@@ -321,6 +325,8 @@ arrow.backward.square.fill
 arrow.clockwise
 arrow.clockwise.circle
 arrow.clockwise.circle.fill
+arrow.clockwise.heart
+arrow.clockwise.heart.fill
 arrow.clockwise.icloud
 arrow.clockwise.icloud.fill
 arrow.counterclockwise
@@ -348,6 +354,8 @@ arrow.down.forward.circle
 arrow.down.forward.circle.fill
 arrow.down.forward.square
 arrow.down.forward.square.fill
+arrow.down.heart
+arrow.down.heart.fill
 arrow.down.left
 arrow.down.left.circle
 arrow.down.left.circle.fill
@@ -464,6 +472,8 @@ arrow.up.forward.circle
 arrow.up.forward.circle.fill
 arrow.up.forward.square
 arrow.up.forward.square.fill
+arrow.up.heart
+arrow.up.heart.fill
 arrow.up.left
 arrow.up.left.and.arrow.down.right
 arrow.up.left.and.arrow.down.right.circle
@@ -934,6 +944,8 @@ command.circle
 command.circle.fill
 command.square
 command.square.fill
+cone
+cone.fill
 contextualmenu.and.cursorarrow
 control
 cpu
@@ -958,6 +970,7 @@ cruzeirosign.square.fill
 cube
 cube.fill
 cube.transparent
+cube.transparent.fill
 curlybraces
 curlybraces.square
 curlybraces.square.fill
@@ -970,6 +983,8 @@ cursorarrow.motionlines
 cursorarrow.motionlines.click
 cursorarrow.rays
 cursorarrow.square
+cylinder
+cylinder.fill
 cylinder.split.1x2
 cylinder.split.1x2.fill
 d.circle
@@ -1032,6 +1047,8 @@ doc.plaintext.fill
 doc.richtext
 doc.richtext.fill
 doc.text
+doc.text.below.ecg
+doc.text.below.ecg.fill
 doc.text.fill
 doc.text.fill.viewfinder
 doc.text.magnifyingglass
@@ -1106,6 +1123,8 @@ equal.circle.fill
 equal.square
 equal.square.fill
 escape
+esim
+esim.fill
 eurosign.circle
 eurosign.circle.fill
 eurosign.square
@@ -1176,6 +1195,8 @@ face.smiling.fill
 faceid
 faxmachine
 fiberchannel
+figure.stand
+figure.stand.line.dotted.figure.stand
 figure.walk
 figure.walk.circle
 figure.walk.circle.fill
@@ -1330,6 +1351,10 @@ hand.thumbsup
 hand.thumbsup.fill
 hand.wave
 hand.wave.fill
+hands.clap
+hands.clap.fill
+hands.sparkles
+hands.sparkles.fill
 hare
 hare.fill
 headphones
@@ -1350,6 +1375,10 @@ helm
 hexagon
 hexagon.fill
 hifispeaker
+hifispeaker.2
+hifispeaker.2.fill
+hifispeaker.and.homepod
+hifispeaker.and.homepod.fill
 hifispeaker.fill
 highlighter
 homekit
@@ -1701,6 +1730,10 @@ opticaldisc
 opticaldiscdrive
 opticaldiscdrive.fill
 option
+oval
+oval.fill
+oval.portrait
+oval.portrait.fill
 p.circle
 p.circle.fill
 p.square
@@ -1782,6 +1815,7 @@ person.fill.questionmark
 person.fill.turn.down
 person.fill.turn.left
 person.fill.turn.right
+person.fill.viewfinder
 person.fill.xmark
 person.icloud
 person.icloud.fill
@@ -1879,6 +1913,9 @@ plusminus.circle.fill
 point.fill.topleft.down.curvedto.point.fill.bottomright.up
 point.topleft.down.curvedto.point.bottomright.up
 power
+poweroff
+poweron
+powersleep
 printer
 printer.dotmatrix
 printer.dotmatrix.fill
@@ -1891,6 +1928,8 @@ purchased.circle
 purchased.circle.fill
 puzzlepiece
 puzzlepiece.fill
+pyramid
+pyramid.fill
 q.circle
 q.circle.fill
 q.square
@@ -2071,10 +2110,10 @@ seal.fill
 selection.pin.in.out
 server.rack
 shadow
-sheqelsign.circle
-sheqelsign.circle.fill
-sheqelsign.square
-sheqelsign.square.fill
+shekelsign.circle
+shekelsign.circle.fill
+shekelsign.square
+shekelsign.square.fill
 shield
 shield.fill
 shield.lefthalf.fill
@@ -2121,6 +2160,8 @@ smoke.fill
 snow
 sparkle
 sparkles
+sparkles.rectangle.stack
+sparkles.rectangle.stack.fill
 sparkles.square.fill.on.square
 speaker
 speaker.fill
@@ -2215,12 +2256,12 @@ square.split.diagonal.2x2
 square.split.diagonal.2x2.fill
 square.split.diagonal.fill
 square.stack
-square.stack.3d.down.dottedline
-square.stack.3d.down.dottedline.fill
 square.stack.3d.down.forward
 square.stack.3d.down.forward.fill
 square.stack.3d.down.right
 square.stack.3d.down.right.fill
+square.stack.3d.forward.dottedline
+square.stack.3d.forward.dottedline.fill
 square.stack.3d.up
 square.stack.3d.up.badge.a
 square.stack.3d.up.badge.a.fill
@@ -2235,6 +2276,7 @@ squareshape.controlhandles.on.squareshape.controlhandles
 squareshape.dashed.squareshape
 squareshape.fill
 squareshape.split.2x2
+squareshape.split.2x2.dotted
 squareshape.split.3x3
 squareshape.squareshape.dashed
 star
@@ -2323,6 +2365,8 @@ text.badge.minus
 text.badge.plus
 text.badge.star
 text.badge.xmark
+text.below.photo
+text.below.photo.fill
 text.book.closed
 text.book.closed.fill
 text.bubble
@@ -2354,11 +2398,14 @@ timelapse
 timeline.selection
 timer
 timer.square
+togglepower
 tornado
 tortoise
 tortoise.fill
 touchid
 tram
+tram.circle
+tram.circle.fill
 tram.fill
 tram.tunnel.fill
 trash

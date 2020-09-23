@@ -5,7 +5,7 @@
     <img src="https://img.shields.io/badge/Xcode-12.0+-brightgreen.svg" />
     <img src="https://img.shields.io/badge/Swift-5.3-orange.svg" />
     <img src="https://img.shields.io/badge/SwiftUI-2.0-red.svg" />
-    <img src="https://img.shields.io/badge/SF Symbols-Version 2.0 (37) beta-lightgray.svg" />
+    <img src="https://img.shields.io/badge/SF Symbols-Version 2.0 (40)-lightgray.svg" />
 </p>
  
 # SF Symbols (SwiftUI 2.0 App)
