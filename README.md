@@ -5,9 +5,9 @@
     <img src="https://img.shields.io/badge/Xcode-12.0+-brightgreen.svg" />
     <img src="https://img.shields.io/badge/Swift-5.3-orange.svg" />
     <img src="https://img.shields.io/badge/SwiftUI-2.0-red.svg" />
-    <img src="https://img.shields.io/badge/SF Symbols-Version 2.0 (40)-lightgray.svg" />
+    <img src="https://img.shields.io/badge/SF Symbols-Version 2.1 (44)-lightgray.svg" />
 </p>
- 
+
 # SF Symbols (SwiftUI 2.0 App)
 > Experimenting with `SwiftUI 2.0` whilst creating a practical app to browse the SF Symbols via an iOS/iPadOS app.
 

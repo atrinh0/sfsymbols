@@ -10,9 +10,13 @@ square.grid.3x1.folder.badge.plus
 square.grid.3x1.folder.fill.badge.plus
 paperplane.circle.fill
 externaldrive.badge.plus
+externaldrive.fill.badge.plus
 externaldrive.badge.minus
+externaldrive.fill.badge.minus
 externaldrive.badge.checkmark
+externaldrive.fill.badge.checkmark
 externaldrive.badge.xmark
+externaldrive.fill.badge.xmark
 doc.badge.plus
 doc.fill.badge.plus
 note.text.badge.plus
@@ -27,6 +31,7 @@ arrowshape.turn.up.left.2.circle.fill
 arrowshape.turn.up.backward.2.circle.fill
 bookmark.fill
 bookmark.circle.fill
+paperclip
 link.circle.fill
 link.badge.plus
 person.badge.plus
@@ -100,6 +105,7 @@ phone.down.circle.fill
 teletype.circle.fill
 video.circle.fill
 video.badge.plus
+video.fill.badge.plus
 video.badge.checkmark
 video.fill.badge.checkmark
 envelope.circle.fill
@@ -113,6 +119,7 @@ cart.badge.minus
 cart.fill.badge.minus
 gauge.badge.plus
 gauge.badge.minus
+wifi
 pin.circle.fill
 mappin.circle.fill
 car.circle.fill
