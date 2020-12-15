@@ -1,8 +1,8 @@
 <p align="center"><img src="images/sfsymbols-logo.png"></p>
 
 <p align="center">
-    <img src="https://img.shields.io/badge/iOS-14.0+-blue.svg" />
-    <img src="https://img.shields.io/badge/Xcode-12.0+-brightgreen.svg" />
+    <img src="https://img.shields.io/badge/iOS-14.3+-blue.svg" />
+    <img src="https://img.shields.io/badge/Xcode-12.3+-brightgreen.svg" />
     <img src="https://img.shields.io/badge/Swift-5.3-orange.svg" />
     <img src="https://img.shields.io/badge/SwiftUI-2.0-red.svg" />
     <img src="https://img.shields.io/badge/SF Symbols-Version 2.1 (44)-lightgray.svg" />
