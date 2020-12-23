@@ -16,42 +16,18 @@ struct SymbolList: View {
     @State private var searchText = ""
     @State private var sortOrder: SortOrder = .defaultOrder
     @State private var showingDetails = false
-    
     @State private var showingAudit = false
     
-    private let layout = [
-        GridItem(.adaptive(minimum: 100), alignment: .top)
-    ]
-    
-    var pluralizer: String { filteredSymbols(searchText).count == 1 ? "" : "s" }
+    private let layout = [GridItem(.adaptive(minimum: 100), alignment: .top)]
+    private var pluralizer: String { filteredSymbols(searchText).count == 1 ? "" : "s" }
     
     var body: some View {
         NavigationView {
             ZStack {
                 ScrollView {
                     searchBar
-                    HStack {
-                        Text("\(filteredSymbols(searchText).count) symbol\(pluralizer)")
-                            .font(.subheadline)
-                            .fontWeight(.semibold)
-                            .foregroundColor(.secondary)
-                    }
-                    LazyVGrid(columns: layout, spacing: 16) {
-                        ForEach(filteredSymbols(searchText), id: \.self) { symbol in
-                            Button(action: { select(symbol) }) {
-                                SymbolCell(symbol: symbol, isFocused: false)
-                                    .contextMenu {
-                                        Button(action: {
-                                            select(symbol)
-                                        }) {
-                                            Text("Enlarge")
-                                            Image(systemName: "arrow.up.left.and.arrow.down.right")
-                                        }
-                                    }
-                            }
-                            .buttonStyle(PlainButtonStyle())
-                        }
-                    }
+                    symbolsCount
+                    symbolsGrid
                 }
             }
             .navigationBarTitle("SF Symbols", displayMode: .automatic)
@@ -85,7 +61,9 @@ struct SymbolList: View {
                         })
     }
     
-    var searchBar: some View {
+    // MARK: - Subviews
+    
+    private var searchBar: some View {
         HStack {
             TextField("Search", text: $searchText)
                 .disableAutocorrection(true)
@@ -107,6 +85,36 @@ struct SymbolList: View {
         }
         .padding(.horizontal)
     }
+    
+    private var symbolsCount: some View {
+        HStack {
+            Text("\(filteredSymbols(searchText).count) symbol\(pluralizer)")
+                .font(.subheadline)
+                .fontWeight(.semibold)
+                .foregroundColor(.secondary)
+        }
+    }
+    
+    private var symbolsGrid: some View {
+        LazyVGrid(columns: layout, spacing: 16) {
+            ForEach(filteredSymbols(searchText), id: \.self) { symbol in
+                Button(action: { select(symbol) }) {
+                    SymbolCell(symbol: symbol, isFocused: false)
+                        .contextMenu {
+                            Button(action: {
+                                select(symbol)
+                            }) {
+                                Text("Enlarge")
+                                Image(systemName: "arrow.up.left.and.arrow.down.right")
+                            }
+                        }
+                }
+                .buttonStyle(PlainButtonStyle())
+            }
+        }
+    }
+
+    // MARK: - Helpers
     
     private func filteredSymbols(_ searchText: String) -> [Symbol] {
         return model.symbols(for: sortOrder, filter: searchText)

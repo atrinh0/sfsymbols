@@ -71,12 +71,10 @@
 		FC1E55D32326D576003052AD /* sfsymbols */ = {
 			isa = PBXGroup;
 			children = (
-				FCCE860024A909C100781703 /* Model */,
 				FCCE85FF24A7A2E200781703 /* Components */,
+				FCCE860024A909C100781703 /* Model */,
+				FCBA3E542593781F0091BEED /* Views */,
 				FC1E55D42326D576003052AD /* SFSymbolsApp.swift */,
-				FC1E55D82326D576003052AD /* SymbolList.swift */,
-				FCCE85FD24A79B5C00781703 /* SymbolDetail.swift */,
-				FCD646B624D6C4C4002E1D9C /* AuditResult.swift */,
 				FCCE85F824A7787900781703 /* Supporting files */,
 			);
 			path = sfsymbols;
@@ -106,6 +104,16 @@
 				FCAEB4DA24D36478008D6C05 /* NavButtonStyle.swift */,
 			);
 			path = ViewModifiers;
+			sourceTree = "<group>";
+		};
+		FCBA3E542593781F0091BEED /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FC1E55D82326D576003052AD /* SymbolList.swift */,
+				FCCE85FD24A79B5C00781703 /* SymbolDetail.swift */,
+				FCD646B624D6C4C4002E1D9C /* AuditResult.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		FCCE85F824A7787900781703 /* Supporting files */ = {
