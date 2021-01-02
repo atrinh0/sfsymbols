@@ -53,11 +53,15 @@ struct SymbolList: View {
         }
         .navigationViewStyle(StackNavigationViewStyle())
         .sheet(isPresented: $showingDetails) {
-            SymbolDetail(model: model, showingDetails: $showingDetails)
+            SymbolDetail(model: model) {
+                showingDetails = false
+            }
         }
         .background(EmptyView()
                         .sheet(isPresented: $showingAudit) {
-                            AuditResult(model: model, showingAudit: $showingAudit)
+                            AuditResult(model: model) {
+                                showingAudit = false
+                            }
                         })
     }
     

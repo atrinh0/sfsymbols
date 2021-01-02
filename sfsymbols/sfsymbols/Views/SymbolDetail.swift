@@ -10,13 +10,13 @@ import SwiftUI
 
 struct SymbolDetail: View {
     @ObservedObject var model: SymbolModel
-    @Binding var showingDetails: Bool
+    let closeAction: () -> Void
     
     var body: some View {
         VStack {
             HStack {
                 Spacer()
-                Button(action: { showingDetails = false }) {
+                Button(action: closeAction) {
                     Image(systemName: "xmark.circle.fill")
                         .navButtonStyle()
                         .padding()
@@ -32,6 +32,6 @@ struct SymbolDetail: View {
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        SymbolDetail(model: SymbolModel(), showingDetails: .constant(true))
+        SymbolDetail(model: SymbolModel(), closeAction: { })
     }
 }
