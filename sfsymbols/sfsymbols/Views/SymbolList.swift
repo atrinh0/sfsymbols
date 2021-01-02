@@ -34,14 +34,14 @@ struct SymbolList: View {
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
                     Menu {
-                        Button(action: { showingAudit = true }) {
-                            Text("Run Audit...")
-                        }
-                        Divider()
                         Picker(selection: $sortOrder, label: Text("Sort")) {
                             ForEach(SortOrder.allCases, id: \.self) { order in
                                 Text(order.rawValue).tag(order)
                             }
+                        }
+                        Divider()
+                        Button(action: { showingAudit = true }) {
+                            Text("Run Audit...")
                         }
                     }
                     label: {
