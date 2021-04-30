@@ -1,6 +1,7 @@
 airpodsmax
 applewatch.side.right
 character.bubble
+character.bubble.fill
 character.cursor.ibeam
 character.textbox
 hifispeaker.and.homepodmini
@@ -8,9 +9,9 @@ hifispeaker.and.homepodmini.fill
 homepod.and.homepodmini
 homepod.and.homepodmini.fill
 homepodmini
+homepodmini.fill
 homepodmini.2
 homepodmini.2.fill
-homepodmini.fill
 rectangle.topthird.inset.fill
 square.and.arrow.up
 square.and.arrow.up.fill
