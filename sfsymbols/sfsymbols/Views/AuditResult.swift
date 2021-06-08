@@ -40,6 +40,7 @@ struct AuditResult: View {
             List(notFound, id: \.self) { symbol in
                 Text(symbol)
             }
+            .listStyle(.plain)
         }
     }
 }

@@ -25,10 +25,12 @@ struct SymbolList: View {
         NavigationView {
             ZStack {
                 ScrollView {
-                    searchBar
                     symbolsCount
+                        .padding()
                     symbolsGrid
+                        .padding(.horizontal)
                 }
+                .searchable(text: $searchText)
             }
             .navigationBarTitle("SF Symbols", displayMode: .automatic)
             .toolbar {
@@ -51,7 +53,7 @@ struct SymbolList: View {
                 }
             }
         }
-        .navigationViewStyle(StackNavigationViewStyle())
+        .navigationViewStyle(.stack)
         .sheet(isPresented: $showingDetails) {
             SymbolDetail(model: model) {
                 showingDetails = false
@@ -66,29 +68,6 @@ struct SymbolList: View {
     }
     
     // MARK: - Subviews
-    
-    private var searchBar: some View {
-        HStack {
-            TextField("Search", text: $searchText)
-                .disableAutocorrection(true)
-                .foregroundColor(Color.primary)
-                .frame(height: 50)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-            if !searchText.isEmpty {
-                Button(action: {
-                    searchText = ""
-                    UIApplication.shared.windows.first?.endEditing(true)
-                }) {
-                    Image(systemName: "xmark.circle.fill")
-                        .font(Font.body.bold())
-                        .imageScale(.large)
-                        .foregroundColor(Color.primary)
-                }
-                .pressableButton()
-            }
-        }
-        .padding(.horizontal)
-    }
     
     private var symbolsCount: some View {
         HStack {
@@ -111,9 +90,15 @@ struct SymbolList: View {
                                 Text("Enlarge")
                                 Image(systemName: "arrow.up.left.and.arrow.down.right")
                             }
+                            Button(action: {
+                                let pasteboard = UIPasteboard.general
+                                pasteboard.string = symbol.name
+                            }) {
+                                Label("Copy Name", systemImage: "doc.on.doc")
+                            }
                         }
                 }
-                .buttonStyle(PlainButtonStyle())
+                .buttonStyle(.plain)
             }
         }
     }
@@ -125,7 +110,6 @@ struct SymbolList: View {
     }
     
     private func select(_ symbol: Symbol) {
-        UIApplication.shared.windows.first?.endEditing(true)
         model.select(symbol)
         hapticBump()
         showingDetails = true
