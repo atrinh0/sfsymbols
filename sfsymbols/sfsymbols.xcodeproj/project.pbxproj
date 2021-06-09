@@ -16,6 +16,7 @@
 		FC9FF79524A913E500D69C8E /* SymbolsSortedByName.txt in Resources */ = {isa = PBXBuildFile; fileRef = FC9FF79424A913E500D69C8E /* SymbolsSortedByName.txt */; };
 		FC9FF79724A9142A00D69C8E /* MulticolorSymbols.txt in Resources */ = {isa = PBXBuildFile; fileRef = FC9FF79624A9142A00D69C8E /* MulticolorSymbols.txt */; };
 		FCAEB4DB24D36478008D6C05 /* NavButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAEB4DA24D36478008D6C05 /* NavButtonStyle.swift */; };
+		FCB91C5A267127BE00DA3E9C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = FCB91C59267127BE00DA3E9C /* README.md */; };
 		FCCE85FC24A7796D00781703 /* SymbolCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCE85FB24A7796D00781703 /* SymbolCell.swift */; };
 		FCCE85FE24A79B5C00781703 /* SymbolDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCE85FD24A79B5C00781703 /* SymbolDetail.swift */; };
 		FCCE860224A909DB00781703 /* Symbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCE860124A909DB00781703 /* Symbol.swift */; };
@@ -35,6 +36,7 @@
 		FC9FF79424A913E500D69C8E /* SymbolsSortedByName.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = SymbolsSortedByName.txt; sourceTree = "<group>"; };
 		FC9FF79624A9142A00D69C8E /* MulticolorSymbols.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = MulticolorSymbols.txt; sourceTree = "<group>"; };
 		FCAEB4DA24D36478008D6C05 /* NavButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavButtonStyle.swift; sourceTree = "<group>"; };
+		FCB91C59267127BE00DA3E9C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		FCCE85FB24A7796D00781703 /* SymbolCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolCell.swift; sourceTree = "<group>"; };
 		FCCE85FD24A79B5C00781703 /* SymbolDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolDetail.swift; sourceTree = "<group>"; };
 		FCCE860124A909DB00781703 /* Symbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbol.swift; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 		FC1E55C82326D576003052AD = {
 			isa = PBXGroup;
 			children = (
+				FCB91C59267127BE00DA3E9C /* README.md */,
 				FC1E55D32326D576003052AD /* sfsymbols */,
 				FC1E55D22326D576003052AD /* Products */,
 			);
@@ -204,6 +207,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCB91C5A267127BE00DA3E9C /* README.md in Resources */,
 				FC9FF79324A9115700D69C8E /* SymbolsSortedByDefault.txt in Resources */,
 				FC9FF79724A9142A00D69C8E /* MulticolorSymbols.txt in Resources */,
 				FC9FF79524A913E500D69C8E /* SymbolsSortedByName.txt in Resources */,

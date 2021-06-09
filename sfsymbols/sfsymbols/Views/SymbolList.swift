@@ -19,7 +19,6 @@ struct SymbolList: View {
     @State private var showingAudit = false
     
     private let layout = [GridItem(.adaptive(minimum: 100), alignment: .top)]
-    private var pluralizer: String { filteredSymbols(searchText).count == 1 ? "" : "s" }
     
     var body: some View {
         NavigationView {
@@ -42,36 +41,34 @@ struct SymbolList: View {
                             }
                         }
                         Divider()
-                        Button(action: { showingAudit = true }) {
+                        Button {
+                            showingAudit = true
+                        } label: {
                             Text("Run Audit...")
                         }
                     }
-                    label: {
-                        Image(systemName: "ellipsis.circle.fill")
-                            .navButtonStyle()
-                    }
+                label: {
+                    Image(systemName: "ellipsis.circle.fill")
+                        .navButtonStyle()
+                }
                 }
             }
         }
         .navigationViewStyle(.stack)
         .sheet(isPresented: $showingDetails) {
-            SymbolDetail(model: model) {
-                showingDetails = false
-            }
+            SymbolDetail(model: model)
         }
         .background(EmptyView()
                         .sheet(isPresented: $showingAudit) {
-                            AuditResult(model: model) {
-                                showingAudit = false
-                            }
-                        })
+            AuditResult(model: model)
+        })
     }
     
     // MARK: - Subviews
     
     private var symbolsCount: some View {
         HStack {
-            Text("\(filteredSymbols(searchText).count) symbol\(pluralizer)")
+            Text("^[\(filteredSymbols(searchText).count) symbol](inflect: true)")
                 .font(.subheadline)
                 .fontWeight(.semibold)
                 .foregroundColor(.secondary)
@@ -81,19 +78,21 @@ struct SymbolList: View {
     private var symbolsGrid: some View {
         LazyVGrid(columns: layout, spacing: 16) {
             ForEach(filteredSymbols(searchText), id: \.self) { symbol in
-                Button(action: { select(symbol) }) {
+                Button {
+                    select(symbol)
+                } label: {
                     SymbolCell(symbol: symbol, isFocused: false)
                         .contextMenu {
-                            Button(action: {
+                            Button {
                                 select(symbol)
-                            }) {
+                            } label: {
                                 Text("Enlarge")
                                 Image(systemName: "arrow.up.left.and.arrow.down.right")
                             }
-                            Button(action: {
+                            Button {
                                 let pasteboard = UIPasteboard.general
                                 pasteboard.string = symbol.name
-                            }) {
+                            } label: {
                                 Label("Copy Name", systemImage: "doc.on.doc")
                             }
                         }
@@ -102,7 +101,7 @@ struct SymbolList: View {
             }
         }
     }
-
+    
     // MARK: - Helpers
     
     private func filteredSymbols(_ searchText: String) -> [Symbol] {

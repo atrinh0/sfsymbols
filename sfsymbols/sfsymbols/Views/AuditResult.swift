@@ -10,13 +10,15 @@ import SwiftUI
 
 struct AuditResult: View {
     @ObservedObject var model: SymbolModel
-    let closeAction: () -> Void
+    @Environment(\.dismiss) var dismiss
     
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
                 Spacer()
-                Button(action: closeAction) {
+                Button {
+                    dismiss()
+                } label: {
                     Image(systemName: "xmark.circle.fill")
                         .navButtonStyle()
                         .padding()
@@ -47,6 +49,6 @@ struct AuditResult: View {
 
 struct AuditResult_Previews: PreviewProvider {
     static var previews: some View {
-        AuditResult(model: SymbolModel(), closeAction: { })
+        AuditResult(model: SymbolModel())
     }
 }
