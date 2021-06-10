@@ -8,8 +8,8 @@
     <img src="https://img.shields.io/badge/SF Symbols-3.0 (55)-lightgray.svg" />
 </p>
 
-# SF Symbols (SwiftUI 2.0 App)
-> Experimenting with `SwiftUI 2.0` whilst creating a practical app to browse the SF Symbols via an iOS/iPadOS app.
+# SF Symbols (SwiftUI 3.0 App)
+> Experimenting with `SwiftUI 3.0` whilst creating a practical app to browse the SF Symbols via an iOS/iPadOS app.
 
 <img src="images/search.gif"> <img src="images/sort.gif">
 
