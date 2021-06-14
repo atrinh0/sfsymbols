@@ -58,10 +58,9 @@ struct SymbolList: View {
         .sheet(isPresented: $showingDetails) {
             SymbolDetail(model: model)
         }
-        .background(EmptyView()
-                        .sheet(isPresented: $showingAudit) {
+        .sheet(isPresented: $showingAudit) {
             AuditResult(model: model)
-        })
+        }
     }
     
     // MARK: - Subviews
