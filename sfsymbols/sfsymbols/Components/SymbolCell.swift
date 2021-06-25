@@ -35,18 +35,8 @@ struct SymbolCell: View {
                 .font(isFocused ? .largeTitle : .caption)
                 .multilineTextAlignment(.center)
                 .lineLimit(isFocused ? .none : 2)
+                .textSelection(.enabled)
                 .frame(width: isFocused ? 300 : 100)
-            if isFocused {
-                Button {
-                    let pasteboard = UIPasteboard.general
-                    pasteboard.string = symbol.name
-                } label: {
-                    Label("Copy Name", systemImage: "doc.on.clipboard")
-                }
-                .controlProminence(.increased)
-                .buttonStyle(.bordered)
-                .tint(.accentColor)
-            }
         }
     }
 }
