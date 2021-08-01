@@ -10,10 +10,10 @@ import SwiftUI
 
 struct SymbolsListView: View {
     @State private var searchText = ""
-    
+
     @State private var showSortOptions = false
     @State private var sortOrder: SortOrder = .defaultOrder
-    
+
     @State private var showingDetails = false
     @State private var focusedSymbol = ""
 
@@ -21,9 +21,9 @@ struct SymbolsListView: View {
         case defaultOrder = "Default"
         case name = "Name"
     }
-    
+
     private let layout = [GridItem(.adaptive(minimum: 100), alignment: .top)]
-    
+
     var body: some View {
         NavigationView {
             ZStack {
@@ -85,7 +85,7 @@ struct SymbolsListView: View {
             )
         }
     }
-    
+
     private func filteredSymbols(_ searchText: String) -> [String] {
         var filteredSymbols = symbols()
         if !searchText.isEmpty {
@@ -93,11 +93,11 @@ struct SymbolsListView: View {
         }
         return filteredSymbols
     }
-    
+
     private func symbols() -> [String] {
         return sortOrder == .defaultOrder ? symbolsSortedByDefault : symbolsSortedByName
     }
-    
+
     private func isMulticolor(symbol: String) -> Bool {
         return multicolorSymbols.contains(symbol)
     }

@@ -12,14 +12,14 @@ import CoreHaptics
 
 struct SymbolList: View {
     @ObservedObject var model: SymbolModel
-    
+
     @State private var searchText = ""
     @State private var sortOrder: SortOrder = .defaultOrder
     @State private var showingDetails = false
     @State private var showingAudit = false
-    
+
     private let layout = [GridItem(.adaptive(minimum: 100), alignment: .top)]
-    
+
     var body: some View {
         NavigationView {
             ZStack {
@@ -59,9 +59,9 @@ struct SymbolList: View {
             AuditResult(model: model)
         }
     }
-    
+
     // MARK: - Subviews
-    
+
     private var symbolsCount: some View {
         HStack {
             Text("^[\(filteredSymbols(searchText).count) symbol](inflect: true)")
@@ -71,7 +71,7 @@ struct SymbolList: View {
         }
         .padding()
     }
-    
+
     private var symbolsGrid: some View {
         LazyVGrid(columns: layout, spacing: 16) {
             ForEach(filteredSymbols(searchText), id: \.self) { symbol in
@@ -99,19 +99,19 @@ struct SymbolList: View {
         }
         .padding(.horizontal)
     }
-    
+
     // MARK: - Helpers
-    
+
     private func filteredSymbols(_ searchText: String) -> [Symbol] {
         return model.symbols(for: sortOrder, filter: searchText)
     }
-    
+
     private func select(_ symbol: Symbol) {
         model.select(symbol)
         hapticBump()
         showingDetails = true
     }
-    
+
     private func hapticBump() {
         let generator = UIImpactFeedbackGenerator(style: .light)
         generator.impactOccurred()

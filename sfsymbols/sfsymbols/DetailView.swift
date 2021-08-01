@@ -11,7 +11,7 @@ import SwiftUI
 struct FocusedView: View {
     @Binding var showingDetails: Bool
     let symbol: String
-    
+
     var body: some View {
         VStack {
             HStack {

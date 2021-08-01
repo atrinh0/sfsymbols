@@ -11,7 +11,7 @@ import SwiftUI
 struct SymbolDetail: View {
     @ObservedObject var model: SymbolModel
     @Environment(\.dismiss) var dismiss
-    
+
     var body: some View {
         VStack {
             HStack {

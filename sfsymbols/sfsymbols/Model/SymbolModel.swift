@@ -18,13 +18,13 @@ class SymbolModel: ObservableObject {
     private var symbolsSortedByDefault: [String] = []
     private var symbolsSortedByName: [String] = []
     private var multicolorSymbols: [String] = []
-    
+
     @Published var selectedSymbol: Symbol = Symbol(name: "leaf.fill", isMulticolored: true)
 
     init() {
         loadSymbols()
     }
-    
+
     func symbols(for sortOrder: SortOrder, filter: String) -> [Symbol] {
         var symbols: [String] = []
         switch sortOrder {
@@ -40,7 +40,7 @@ class SymbolModel: ObservableObject {
             }
         }
     }
-    
+
     func select(_ symbol: Symbol) {
         selectedSymbol = symbol
     }
@@ -52,7 +52,7 @@ extension SymbolModel {
         symbolsSortedByName = symbolsFromFile(name: "SymbolsSortedByName")
         multicolorSymbols = symbolsFromFile(name: "MulticolorSymbols")
     }
-    
+
     private func symbolsFromFile(name: String) -> [String] {
         if let fileURL = Bundle.main.url(forResource: name, withExtension: "txt") {
             if let fileContents = try? String(contentsOf: fileURL) {
