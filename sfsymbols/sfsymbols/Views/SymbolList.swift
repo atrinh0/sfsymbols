@@ -44,11 +44,10 @@ struct SymbolList: View {
                         } label: {
                             Text("Run Audit...")
                         }
+                    } label: {
+                        Image(systemName: "ellipsis.circle.fill")
+                            .navButtonStyle()
                     }
-                label: {
-                    Image(systemName: "ellipsis.circle.fill")
-                        .navButtonStyle()
-                }
                 }
             }
         }
