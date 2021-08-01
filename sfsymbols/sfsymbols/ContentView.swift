@@ -22,9 +22,7 @@ struct SymbolsListView: View {
         case name = "Name"
     }
     
-    private let layout = [
-        GridItem(.adaptive(minimum: 100), alignment: .top)
-    ]
+    private let layout = [GridItem(.adaptive(minimum: 100), alignment: .top)]
     
     var body: some View {
         NavigationView {
@@ -33,28 +31,28 @@ struct SymbolsListView: View {
                     HStack {
                         TextField("Search", text: $searchText)
                             .disableAutocorrection(true)
-                            .foregroundColor(Color.primary)
+                            .foregroundColor(.primary)
                             .frame(height: 50)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                         if !searchText.isEmpty {
-                            Button(action: {
+                            Button {
                                 searchText = ""
                                 UIApplication.shared.windows.first?.endEditing(true)
-                            }) {
+                            } label: {
                                 Image(systemName: "xmark.circle.fill")
                                     .imageScale(.large)
-                                    .foregroundColor(Color.primary)
+                                    .foregroundColor(.primary)
                             }
                         }
                     }
                     .padding(.horizontal)
                     LazyVGrid(columns: layout, spacing: 16) {
                         ForEach(filteredSymbols(searchText), id: \.self) { symbol in
-                            Button(action: {
+                            Button {
                                 UIApplication.shared.windows.first?.endEditing(true)
                                 focusedSymbol = symbol
                                 showingDetails = true
-                            }) {
+                            } label: {
                                 SymbolCell(symbol: symbol, isFocused: false)
                             }
                             .buttonStyle(PlainButtonStyle())
@@ -65,9 +63,9 @@ struct SymbolsListView: View {
             .navigationBarTitle("SF Symbols", displayMode: .automatic)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: {
+                    Button {
                         showSortOptions.toggle()
-                    }) {
+                    } label: {
                         Image(systemName: "line.horizontal.3.decrease")
                             .imageScale(.large)
                             .padding()
@@ -110,5 +108,3 @@ struct ContentView_Previews: PreviewProvider {
         SymbolsListView()
     }
 }
-
-

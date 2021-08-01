@@ -25,9 +25,7 @@ struct SymbolList: View {
             ZStack {
                 ScrollView {
                     symbolsCount
-                        .padding()
                     symbolsGrid
-                        .padding(.horizontal)
                 }
                 .searchable(text: $searchText)
             }
@@ -72,6 +70,7 @@ struct SymbolList: View {
                 .fontWeight(.semibold)
                 .foregroundColor(.secondary)
         }
+        .padding()
     }
     
     private var symbolsGrid: some View {
@@ -99,6 +98,7 @@ struct SymbolList: View {
                 .buttonStyle(.plain)
             }
         }
+        .padding(.horizontal)
     }
     
     // MARK: - Helpers

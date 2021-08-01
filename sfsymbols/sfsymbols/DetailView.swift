@@ -16,9 +16,9 @@ struct FocusedView: View {
         VStack {
             HStack {
                 Spacer()
-                Button(action: {
+                Button {
                     showingDetails = false
-                }) {
+                } label: {
                     Image(systemName: "xmark.circle.fill")
                         .font(Font.title.bold())
                         .imageScale(.large)

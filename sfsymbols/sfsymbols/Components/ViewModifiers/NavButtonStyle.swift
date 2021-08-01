@@ -13,9 +13,9 @@ import SwiftUI
 struct NavButton: ViewModifier {
     func body(content: Content) -> some View {
         content
-            .font(Font.title2.bold())
+            .font(.title2.bold())
             .imageScale(.large)
-            .foregroundColor(Color.primary.opacity(0.7))
+            .foregroundColor(.primary.opacity(0.7))
     }
 }
 
@@ -32,7 +32,8 @@ struct ButtonPressedStyle: ButtonStyle {
         configuration.label
             .scaleEffect(configuration.isPressed ? 0.85 : 1.0)
             .opacity(configuration.isPressed ? 0.75 : 1.0)
-            .animation(Animation.spring(response: 0.35, dampingFraction: 0.35, blendDuration: 1), value: configuration.isPressed)
+            .animation(.spring(response: 0.35, dampingFraction: 0.35, blendDuration: 1),
+                       value: configuration.isPressed)
     }
 }
 

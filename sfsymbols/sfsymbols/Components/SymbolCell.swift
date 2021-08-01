@@ -16,7 +16,7 @@ struct SymbolCell: View {
         VStack {
             ZStack {
                 RoundedRectangle(cornerRadius: isFocused ? 24 : 8, style: .continuous)
-                    .foregroundColor(Color.secondary.opacity(0.25))
+                    .foregroundColor(.secondary.opacity(0.25))
                     .frame(width: isFocused ? 300 : 100, height: isFocused ? 234 : 78)
                 if symbol.isMulticolored {
                     Image(systemName: symbol.name)
