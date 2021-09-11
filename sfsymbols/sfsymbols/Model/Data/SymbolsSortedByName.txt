@@ -294,10 +294,15 @@ airpodspro.chargingcase.wireless.fill
 airport.express
 airport.extreme
 airport.extreme.tower
+airtag
+airtag.fill
+airtag.radiowaves.forward
+airtag.radiowaves.forward.fill
 alarm
 alarm.fill
 allergens
 alt
+alternatingcurrent
 amplifier
 ant
 ant.circle
@@ -306,6 +311,7 @@ ant.fill
 antenna.radiowaves.left.and.right
 antenna.radiowaves.left.and.right.circle
 antenna.radiowaves.left.and.right.circle.fill
+antenna.radiowaves.left.and.right.slash
 app
 app.badge
 app.badge.checkmark
@@ -332,6 +338,7 @@ appletvremote.gen3.fill
 appletvremote.gen4
 appletvremote.gen4.fill
 applewatch
+applewatch.case.inset.filled
 applewatch.radiowaves.left.and.right
 applewatch.side.right
 applewatch.slash
@@ -836,6 +843,7 @@ c.circle.fill
 c.square
 c.square.fill
 cable.connector
+cable.connector.horizontal
 cablecar
 cablecar.fill
 calendar
@@ -928,6 +936,8 @@ chart.bar.doc.horizontal.fill
 chart.bar.fill
 chart.bar.xaxis
 chart.line.uptrend.xyaxis
+chart.line.uptrend.xyaxis.circle
+chart.line.uptrend.xyaxis.circle.fill
 chart.pie
 chart.pie.fill
 chart.xyaxis.line
@@ -1002,6 +1012,7 @@ circle.circle
 circle.circle.fill
 circle.dashed
 circle.dashed.inset.filled
+circle.dotted
 circle.fill
 circle.fill.square.fill
 circle.grid.2x1
@@ -1185,13 +1196,17 @@ die.face.5.fill
 die.face.6
 die.face.6.fill
 digitalcrown.arrow.clockwise
+digitalcrown.arrow.clockwise.fill
 digitalcrown.arrow.counterclockwise
-digitalcrown.fill.arrow.clockwise
-digitalcrown.fill.arrow.counterclockwise
+digitalcrown.arrow.counterclockwise.fill
 digitalcrown.horizontal.arrow.clockwise
+digitalcrown.horizontal.arrow.clockwise.fill
 digitalcrown.horizontal.arrow.counterclockwise
-digitalcrown.horizontal.fill.arrow.clockwise
-digitalcrown.horizontal.fill.arrow.counterclockwise
+digitalcrown.horizontal.arrow.counterclockwise.fill
+digitalcrown.horizontal.press
+digitalcrown.horizontal.press.fill
+digitalcrown.press
+digitalcrown.press.fill
 directcurrent
 display
 display.2
@@ -1270,6 +1285,7 @@ e.circle.fill
 e.square
 e.square.fill
 ear
+ear.and.waveform
 ear.badge.checkmark
 ear.fill
 ear.trianglebadge.exclamationmark
@@ -1484,6 +1500,9 @@ gauge
 gauge.badge.minus
 gauge.badge.plus
 gear
+gear.badge.checkmark
+gear.badge.questionmark
+gear.badge.xmark
 gear.circle
 gear.circle.fill
 gearshape
@@ -1503,6 +1522,7 @@ globe.americas
 globe.americas.fill
 globe.asia.australia
 globe.asia.australia.fill
+globe.badge.chevron.backward
 globe.europe.africa
 globe.europe.africa.fill
 gobackward
@@ -1576,6 +1596,8 @@ hand.raised.slash
 hand.raised.slash.fill
 hand.raised.square
 hand.raised.square.fill
+hand.raised.square.on.square
+hand.raised.square.on.square.fill
 hand.tap
 hand.tap.fill
 hand.thumbsdown
@@ -1712,11 +1734,15 @@ iphone.homebutton.circle
 iphone.homebutton.circle.fill
 iphone.homebutton.landscape
 iphone.homebutton.radiowaves.left.and.right
+iphone.homebutton.radiowaves.left.and.right.circle
+iphone.homebutton.radiowaves.left.and.right.circle.fill
 iphone.homebutton.slash
 iphone.homebutton.slash.circle
 iphone.homebutton.slash.circle.fill
 iphone.landscape
 iphone.radiowaves.left.and.right
+iphone.radiowaves.left.and.right.circle
+iphone.radiowaves.left.and.right.circle.fill
 iphone.rear.camera
 iphone.slash
 iphone.slash.circle
@@ -1785,6 +1811,7 @@ l2.rectangle.roundedtop
 l2.rectangle.roundedtop.fill
 ladybug
 ladybug.fill
+landscape.artframe
 lanyardcard
 lanyardcard.fill
 laptopcomputer
@@ -2064,6 +2091,7 @@ nairasign.circle.fill
 nairasign.square
 nairasign.square.fill
 network
+network.badge.shield.half.filled
 newspaper
 newspaper.fill
 nose
@@ -2173,6 +2201,8 @@ person.3.fill
 person.3.sequence
 person.3.sequence.fill
 person.and.arrow.left.and.arrow.right
+person.badge.clock
+person.badge.clock.fill
 person.badge.minus
 person.badge.plus
 person.circle
@@ -2181,6 +2211,8 @@ person.crop.artframe
 person.crop.circle
 person.crop.circle.badge
 person.crop.circle.badge.checkmark
+person.crop.circle.badge.clock
+person.crop.circle.badge.clock.fill
 person.crop.circle.badge.exclamationmark
 person.crop.circle.badge.exclamationmark.fill
 person.crop.circle.badge.fill
@@ -2219,6 +2251,8 @@ person.icloud
 person.icloud.fill
 person.text.rectangle
 person.text.rectangle.fill
+person.wave.2
+person.wave.2.fill
 personalhotspot
 perspective
 pesetasign.circle
@@ -2326,6 +2360,7 @@ plus.rectangle.on.rectangle
 plus.rectangle.portrait
 plus.rectangle.portrait.fill
 plus.square
+plus.square.dashed
 plus.square.fill
 plus.square.fill.on.square.fill
 plus.square.on.square
@@ -2333,6 +2368,8 @@ plus.viewfinder
 plusminus
 plusminus.circle
 plusminus.circle.fill
+point.3.connected.trianglepath.dotted
+point.3.filled.connected.trianglepath.dotted
 point.filled.topleft.down.curvedto.point.bottomright.up
 point.topleft.down.curvedto.point.bottomright.up
 point.topleft.down.curvedto.point.bottomright.up.fill
@@ -2419,10 +2456,6 @@ record.circle.fill
 recordingtape
 rectangle
 rectangle.2.swap
-rectangle.3.offgrid
-rectangle.3.offgrid.bubble.left
-rectangle.3.offgrid.bubble.left.fill
-rectangle.3.offgrid.fill
 rectangle.and.arrow.up.right.and.arrow.down.left
 rectangle.and.arrow.up.right.and.arrow.down.left.slash
 rectangle.and.hand.point.up.left
@@ -2467,7 +2500,8 @@ rectangle.inset.bottomleading.filled
 rectangle.inset.bottomleft.filled
 rectangle.inset.bottomright.filled
 rectangle.inset.bottomtrailing.filled
-rectangle.inset.fill
+rectangle.inset.filled
+rectangle.inset.filled.and.person.filled
 rectangle.inset.filled.on.rectangle
 rectangle.inset.topleading.filled
 rectangle.inset.topleft.filled
@@ -2570,6 +2604,10 @@ rectangle.topthird.inset.filled
 rectangle.trailinghalf.inset.filled
 rectangle.trailinghalf.inset.filled.arrow.trailing
 rectangle.trailingthird.inset.filled
+rectangles.group
+rectangles.group.bubble.left
+rectangles.group.bubble.left.fill
+rectangles.group.fill
 repeat
 repeat.1
 repeat.1.circle
@@ -2632,6 +2670,7 @@ sensor.tag.radiowaves.forward.fill
 server.rack
 shadow
 shareplay
+shareplay.slash
 shekelsign.circle
 shekelsign.circle.fill
 shekelsign.square
@@ -2673,6 +2712,7 @@ slash.circle.fill
 sleep
 sleep.circle
 sleep.circle.fill
+slider.horizontal.2.rectangle.and.arrow.triangle.2.circlepath
 slider.horizontal.3
 slider.horizontal.below.rectangle
 slider.horizontal.below.square.fill.and.square
@@ -2690,6 +2730,8 @@ sparkles
 sparkles.rectangle.stack
 sparkles.rectangle.stack.fill
 sparkles.square.filled.on.square
+sparkles.tv
+sparkles.tv.fill
 speaker
 speaker.badge.exclamationmark
 speaker.badge.exclamationmark.fill
@@ -2895,6 +2937,8 @@ takeoutbag.and.cup.and.straw.fill
 target
 teletype
 teletype.answer
+teletype.answer.circle
+teletype.answer.circle.fill
 teletype.circle
 teletype.circle.fill
 tengesign.circle
