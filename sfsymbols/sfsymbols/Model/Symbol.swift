@@ -6,7 +6,10 @@
 //  Copyright © 2020 An Trinh. All rights reserved.
 //
 
-struct Symbol: Hashable {
-    var name: String
-    var isMulticolored: Bool
+import Foundation
+
+struct Symbol: Hashable, Identifiable {
+    let name: String
+    let isMulticolored: Bool
+    let id = UUID() // swiftlint:disable:this identifier_name
 }

@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct SymbolDetail: View {
-    @ObservedObject var model: SymbolModel
+    let symbol: Symbol
     @Environment(\.dismiss) var dismiss
 
     var body: some View {
@@ -26,7 +26,7 @@ struct SymbolDetail: View {
                 .pressableButton()
             }
             Spacer()
-            SymbolCell(symbol: model.selectedSymbol, isFocused: true)
+            SymbolCell(symbol: symbol, isFocused: true)
             Spacer()
         }
     }
@@ -34,6 +34,6 @@ struct SymbolDetail: View {
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        SymbolDetail(model: SymbolModel())
+        SymbolDetail(symbol: Symbol(name: "leaf", isMulticolored: true))
     }
 }

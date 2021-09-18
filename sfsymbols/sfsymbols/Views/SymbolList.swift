@@ -11,11 +11,11 @@ import UIKit
 import CoreHaptics
 
 struct SymbolList: View {
-    @ObservedObject var model: SymbolModel
+    private let model = SymbolModel()
 
     @State private var searchText = ""
     @State private var sortOrder: SortOrder = .defaultOrder
-    @State private var showingDetails = false
+    @State private var selectedSymbol: Symbol?
     @State private var showingAudit = false
 
     private let layout = [GridItem(.adaptive(minimum: 100), alignment: .top)]
@@ -42,7 +42,7 @@ struct SymbolList: View {
                         Button {
                             showingAudit = true
                         } label: {
-                            Text("Run Audit...")
+                            Label("Run Audit...", systemImage: "text.magnifyingglass")
                         }
                     } label: {
                         Image(systemName: "ellipsis.circle.fill")
@@ -52,8 +52,8 @@ struct SymbolList: View {
             }
         }
         .navigationViewStyle(.stack)
-        .sheet(isPresented: $showingDetails) {
-            SymbolDetail(model: model)
+        .sheet(item: $selectedSymbol) { symbol in
+            SymbolDetail(symbol: symbol)
         }
         .sheet(isPresented: $showingAudit) {
             AuditResult(model: model)
@@ -103,13 +103,12 @@ struct SymbolList: View {
     // MARK: - Helpers
 
     private func filteredSymbols(_ searchText: String) -> [Symbol] {
-        return model.symbols(for: sortOrder, filter: searchText)
+        model.symbols(for: sortOrder, filter: searchText)
     }
 
     private func select(_ symbol: Symbol) {
-        model.select(symbol)
         hapticBump()
-        showingDetails = true
+        selectedSymbol = symbol
     }
 
     private func hapticBump() {
@@ -120,6 +119,6 @@ struct SymbolList: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        SymbolList(model: SymbolModel())
+        SymbolList()
     }
 }
