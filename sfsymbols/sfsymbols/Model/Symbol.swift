@@ -11,5 +11,5 @@ import Foundation
 struct Symbol: Hashable, Identifiable {
     let name: String
     let isMulticolored: Bool
-    let id = UUID() // swiftlint:disable:this identifier_name
+    let id = UUID()
 }

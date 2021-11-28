@@ -1,5 +1,5 @@
 //
-//  NavButtonStyle.swift
+//  Button+Extensions.swift
 //  sfsymbols
 //
 //  Created by An Trinh on 30/7/20.
@@ -7,25 +7,6 @@
 //
 
 import SwiftUI
-
-// MARK: - Image
-
-struct NavButton: ViewModifier {
-    func body(content: Content) -> some View {
-        content
-            .font(.title2.bold())
-            .imageScale(.large)
-            .foregroundColor(.primary.opacity(0.7))
-    }
-}
-
-extension Image {
-    func navButtonStyle() -> some View {
-        self.modifier(NavButton())
-    }
-}
-
-// MARK: - Button
 
 struct ButtonPressedStyle: ButtonStyle {
     func makeBody(configuration: Self.Configuration) -> some View {
