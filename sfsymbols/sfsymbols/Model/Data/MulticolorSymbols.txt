@@ -191,6 +191,7 @@ mic.fill.badge.plus
 smallcircle.filled.circle.fill
 circlebadge.fill
 smallcircle.circle.fill
+rectangle.center.inset.filled.badge.plus
 rectangle.on.rectangle.circle.fill
 rectangle.on.rectangle.slash.circle.fill
 suit.heart

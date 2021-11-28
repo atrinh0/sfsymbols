@@ -1047,6 +1047,7 @@ bolt.circle
 bolt.circle.fill
 bolt.square
 bolt.square.fill
+bolt.ring.closed
 bolt.shield
 bolt.shield.fill
 bolt.slash
@@ -1575,6 +1576,10 @@ iphone.rear.camera
 apps.iphone
 apps.iphone.badge.plus
 apps.iphone.landscape
+platter.filled.top.iphone
+platter.filled.bottom.iphone
+platter.filled.top.and.arrow.up.iphone
+platter.filled.bottom.and.arrow.down.iphone
 platter.2.filled.iphone
 platter.2.filled.iphone.landscape
 iphone.smartbatterycase.gen2
@@ -2187,6 +2192,10 @@ rectangle.and.arrow.up.right.and.arrow.down.left.slash
 square.2.stack.3d
 square.2.stack.3d.top.filled
 square.2.stack.3d.bottom.filled
+square.3.layers.3d.down.right
+square.3.layers.3d.down.left
+square.3.layers.3d.down.forward
+square.3.layers.3d.down.backward
 square.3.stack.3d
 square.3.stack.3d.top.filled
 square.3.stack.3d.middle.filled
@@ -2350,8 +2359,10 @@ text.alignleft
 text.aligncenter
 text.alignright
 text.justify
-text.justifyleft
-text.justifyright
+text.justify.left
+text.justify.right
+text.justify.leading
+text.justify.trailing
 text.redaction
 list.and.film
 line.3.horizontal

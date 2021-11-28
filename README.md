@@ -2,10 +2,10 @@
 
 <p align="center">
     <img src="https://img.shields.io/badge/iOS-15+-blue.svg" />
-    <img src="https://img.shields.io/badge/Xcode-13+-brightgreen.svg" />
+    <img src="https://img.shields.io/badge/Xcode-13.1+-brightgreen.svg" />
     <img src="https://img.shields.io/badge/Swift-5.3-orange.svg" />
     <img src="https://img.shields.io/badge/SwiftUI-3.0-red.svg" />
-    <img src="https://img.shields.io/badge/SF Symbols-3.0 (60)-lightgray.svg" />
+    <img src="https://img.shields.io/badge/SF Symbols-3.1 (63)-lightgray.svg" />
 </p>
 
 # SF Symbols (SwiftUI 3.0 App)

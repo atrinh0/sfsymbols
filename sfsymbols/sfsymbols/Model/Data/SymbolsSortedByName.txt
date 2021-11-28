@@ -793,6 +793,7 @@ bolt.horizontal.circle.fill
 bolt.horizontal.fill
 bolt.horizontal.icloud
 bolt.horizontal.icloud.fill
+bolt.ring.closed
 bolt.shield
 bolt.shield.fill
 bolt.slash
@@ -2377,8 +2378,12 @@ platter.2.filled.ipad.landscape
 platter.2.filled.iphone
 platter.2.filled.iphone.landscape
 platter.bottom.applewatch.case
+platter.filled.bottom.and.arrow.down.iphone
 platter.filled.bottom.applewatch.case
+platter.filled.bottom.iphone
+platter.filled.top.and.arrow.up.iphone
 platter.filled.top.applewatch.case
+platter.filled.top.iphone
 platter.top.applewatch.case
 play
 play.circle
@@ -2830,6 +2835,10 @@ square
 square.2.stack.3d
 square.2.stack.3d.bottom.filled
 square.2.stack.3d.top.filled
+square.3.layers.3d.down.backward
+square.3.layers.3d.down.forward
+square.3.layers.3d.down.left
+square.3.layers.3d.down.right
 square.3.stack.3d
 square.3.stack.3d.bottom.filled
 square.3.stack.3d.middle.filled
@@ -3041,8 +3050,10 @@ text.bubble
 text.bubble.fill
 text.insert
 text.justify
-text.justifyleft
-text.justifyright
+text.justify.leading
+text.justify.left
+text.justify.right
+text.justify.trailing
 text.magnifyingglass
 text.quote
 text.redaction
