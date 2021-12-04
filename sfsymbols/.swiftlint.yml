@@ -9,6 +9,7 @@ opt_in_rules:
   - identical_operands
   - implicit_return
   - modifier_order
+  - prohibited_interface_builder
   - toggle_bool
   - trailing_closure
   - unused_import
