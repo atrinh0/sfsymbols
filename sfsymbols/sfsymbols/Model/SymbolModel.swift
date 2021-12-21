@@ -54,7 +54,7 @@ extension SymbolModel {
     }
 
     private func symbolsFromFile(name: String) -> [String] {
-        guard let  fileURL = Bundle.main.url(forResource: name, withExtension: "txt"),
+        guard let fileURL = Bundle.main.url(forResource: name, withExtension: "txt"),
               let fileContents = try? String(contentsOf: fileURL) else {
                   return []
         }
