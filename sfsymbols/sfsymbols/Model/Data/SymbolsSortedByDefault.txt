@@ -808,6 +808,8 @@ rectangle.slash
 rectangle.slash.fill
 rectangle.lefthalf.filled
 rectangle.righthalf.filled
+rectangle.leadinghalf.filled
+rectangle.trailinghalf.filled
 rectangle.tophalf.filled
 rectangle.bottomhalf.filled
 rectangle.split.2x1
@@ -1652,6 +1654,11 @@ airpodpro.right
 airpodpro.left
 airpodspro.chargingcase.wireless
 airpodspro.chargingcase.wireless.fill
+airpods.gen3
+airpod.gen3.right
+airpod.gen3.left
+airpods.gen3.chargingcase.wireless
+airpods.gen3.chargingcase.wireless.fill
 beats.earphones
 beats.powerbeatspro
 beats.powerbeatspro.right
@@ -1663,6 +1670,11 @@ beats.studiobud.left
 beats.studiobud.right
 beats.studiobuds.chargingcase
 beats.studiobuds.chargingcase.fill
+beats.fit.pro
+beats.fit.pro.left
+beats.fit.pro.right
+beats.fit.pro.chargingcase
+beats.fit.pro.chargingcase.fill
 beats.powerbeatspro.chargingcase
 beats.powerbeatspro.chargingcase.fill
 homepodmini
@@ -2193,10 +2205,13 @@ square.2.stack.3d
 square.2.stack.3d.top.filled
 square.2.stack.3d.bottom.filled
 square.3.layers.3d.down.right
+square.3.layers.3d.down.right.slash
 square.3.layers.3d.down.left
+square.3.layers.3d.down.left.slash
 square.3.layers.3d.down.forward
 square.3.layers.3d.down.backward
 square.3.stack.3d
+square.3.stack.3d.slash
 square.3.stack.3d.top.filled
 square.3.stack.3d.middle.filled
 square.3.stack.3d.bottom.filled

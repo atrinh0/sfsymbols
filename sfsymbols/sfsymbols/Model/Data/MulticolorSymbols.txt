@@ -299,6 +299,7 @@ envelope.circle.fill
 gear
 gear.circle
 gear.circle.fill
+gear.badge.checkmark
 gear.badge.xmark
 gear.badge.questionmark
 gearshape.circle.fill
