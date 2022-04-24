@@ -2,14 +2,14 @@
 
 <p align="center">
     <img src="https://img.shields.io/badge/iOS-15+-blue.svg" />
-    <img src="https://img.shields.io/badge/Xcode-13.1+-brightgreen.svg" />
+    <img src="https://img.shields.io/badge/Xcode-13.3+-brightgreen.svg" />
     <img src="https://img.shields.io/badge/Swift-5.3-orange.svg" />
     <img src="https://img.shields.io/badge/SwiftUI-3.0-red.svg" />
-    <img src="https://img.shields.io/badge/SF Symbols-3.2 (67)-lightgray.svg" />
+    <img src="https://img.shields.io/badge/SF Symbols-3.3 (67.3)-lightgray.svg" />
 </p>
 
-# SF Symbols (SwiftUI 3.0 App)
-> Experimenting with `SwiftUI 3.0` whilst creating a practical app to browse the SF Symbols via an iOS/iPadOS app.
+# SF Symbols (SwiftUI App)
+> Experimenting with `SwiftUI` whilst creating a practical app to browse the SF Symbols via an iOS/iPadOS app.
 
 <img src="images/search.gif"> <img src="images/sort.gif">
 
