@@ -48,7 +48,7 @@ extension SymbolModel {
         symbolsSortedByName = nameStrings.map {
             Symbol(name: $0, isMulticolored: multicoloredStrings.contains($0))
         }
-        multicolorSymbols = defaultOrderStrings.map {
+        multicolorSymbols = multicoloredStrings.map {
             Symbol(name: $0, isMulticolored: true)
         }
     }
