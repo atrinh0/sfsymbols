@@ -3,13 +3,13 @@
 <p align="center">
     <img src="https://img.shields.io/badge/iOS-16+-blue.svg" />
     <img src="https://img.shields.io/badge/Xcode-14+-brightgreen.svg" />
-    <img src="https://img.shields.io/badge/Swift-5.3-orange.svg" />
-    <img src="https://img.shields.io/badge/SwiftUI-3.0-red.svg" />
     <img src="https://img.shields.io/badge/SF Symbols beta-4.0 (75)-lightgray.svg" />
 </p>
 
 # SF Symbols (SwiftUI App)
 > Experimenting with `SwiftUI` whilst creating a practical app to browse the SF Symbols via an iOS/iPadOS app.
+
+<img src="images/variable.gif">
 
 <img src="images/search.gif"> <img src="images/sort.gif">
 
