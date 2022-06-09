@@ -12,12 +12,14 @@ enum SortOrder: String, CaseIterable {
     case defaultOrder = "Sorted by Default"
     case name = "Sorted by Name"
     case multicolored = "Multicolored Only"
+    case variable = "Variable Only"
 }
 
 class SymbolModel {
     private var symbolsSortedByDefault: [Symbol] = []
     private var symbolsSortedByName: [Symbol] = []
     private var multicolorSymbols: [Symbol] = []
+    private var variableSymbols: [Symbol] = []
 
     init() {
         loadSymbols()
@@ -26,7 +28,8 @@ class SymbolModel {
     func symbols(for sortOrder: SortOrder, filter: String = "") -> [Symbol] {
         let symbolsMap: [SortOrder: [Symbol]] = [.defaultOrder: symbolsSortedByDefault,
                                                  .name: symbolsSortedByName,
-                                                 .multicolored: multicolorSymbols]
+                                                 .multicolored: multicolorSymbols,
+                                                 .variable: variableSymbols]
         let symbols = symbolsMap[sortOrder] ?? []
         if filter.isEmpty {
             return symbols
@@ -41,6 +44,7 @@ extension SymbolModel {
         let defaultOrderStrings = symbolsFromFile(name: "SymbolsSortedByDefault")
         let nameStrings = symbolsFromFile(name: "SymbolsSortedByName")
         let multicoloredStrings = symbolsFromFile(name: "MulticolorSymbols")
+        let variableStrings = symbolsFromFile(name: "VariableSymbols")
 
         symbolsSortedByDefault = defaultOrderStrings.map {
             Symbol(name: $0, isMulticolored: multicoloredStrings.contains($0))
@@ -50,6 +54,9 @@ extension SymbolModel {
         }
         multicolorSymbols = multicoloredStrings.map {
             Symbol(name: $0, isMulticolored: true)
+        }
+        variableSymbols = variableStrings.map {
+            Symbol(name: $0, isMulticolored: multicoloredStrings.contains($0))
         }
     }
 
