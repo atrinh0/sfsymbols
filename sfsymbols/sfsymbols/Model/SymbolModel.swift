@@ -47,16 +47,16 @@ extension SymbolModel {
         let variableStrings = symbolsFromFile(name: "VariableSymbols")
 
         symbolsSortedByDefault = defaultOrderStrings.map {
-            Symbol(name: $0, isMulticolored: multicoloredStrings.contains($0))
+            Symbol(name: $0, isMulticolored: multicoloredStrings.contains($0), isVariable: variableStrings.contains($0))
         }
         symbolsSortedByName = nameStrings.map {
-            Symbol(name: $0, isMulticolored: multicoloredStrings.contains($0))
+            Symbol(name: $0, isMulticolored: multicoloredStrings.contains($0), isVariable: variableStrings.contains($0))
         }
         multicolorSymbols = multicoloredStrings.map {
-            Symbol(name: $0, isMulticolored: true)
+            Symbol(name: $0, isMulticolored: true, isVariable: variableStrings.contains($0))
         }
         variableSymbols = variableStrings.map {
-            Symbol(name: $0, isMulticolored: multicoloredStrings.contains($0))
+            Symbol(name: $0, isMulticolored: multicoloredStrings.contains($0), isVariable: true)
         }
     }
 

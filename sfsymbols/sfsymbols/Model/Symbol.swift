@@ -11,5 +11,6 @@ import Foundation
 struct Symbol: Hashable, Identifiable {
     let name: String
     let isMulticolored: Bool
+    let isVariable: Bool
     let id = UUID()
 }

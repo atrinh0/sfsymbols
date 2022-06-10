@@ -34,6 +34,6 @@ struct SymbolDetail: View {
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        SymbolDetail(symbol: Symbol(name: "leaf", isMulticolored: true))
+        SymbolDetail(symbol: Symbol(name: "leaf", isMulticolored: true, isVariable: false))
     }
 }

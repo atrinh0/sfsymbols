@@ -59,6 +59,11 @@ struct SymbolCell: View {
 
             variableValue = newValue
         }
+        .onAppear {
+            if !symbol.isVariable {
+                timer.upstream.connect().cancel()
+            }
+        }
     }
 
     private var safeVariableValue: Double {
@@ -69,8 +74,8 @@ struct SymbolCell: View {
 struct SymbolCell_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            SymbolCell(symbol: Symbol(name: "leaf.fill", isMulticolored: true), isFocused: false)
-            SymbolCell(symbol: Symbol(name: "leaf.fill", isMulticolored: true), isFocused: true)
+            SymbolCell(symbol: Symbol(name: "leaf.fill", isMulticolored: true, isVariable: false), isFocused: false)
+            SymbolCell(symbol: Symbol(name: "leaf.fill", isMulticolored: true, isVariable: false), isFocused: true)
         }
     }
 }
