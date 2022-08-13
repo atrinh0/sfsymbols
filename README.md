@@ -3,7 +3,7 @@
 <p align="center">
     <img src="https://img.shields.io/badge/iOS-16+-blue.svg" />
     <img src="https://img.shields.io/badge/Xcode-14+-brightgreen.svg" />
-    <img src="https://img.shields.io/badge/SF Symbols beta-4.0 (75)-lightgray.svg" />
+    <img src="https://img.shields.io/badge/SF Symbols beta-4.0 (76.1)-lightgray.svg" />
 </p>
 
 # SF Symbols (SwiftUI App)

@@ -8,7 +8,6 @@ person.2.wave.2
 person.2.wave.2.fill
 person.3.sequence
 person.3.sequence.fill
-baseball.diamond.bases
 rays
 slowmo
 timelapse
