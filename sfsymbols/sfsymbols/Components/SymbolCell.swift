@@ -12,8 +12,8 @@ struct SymbolCell: View {
     let symbol: Symbol
     let isFocused: Bool
 
-    @State var variableValue = 0.0
-    @State var isAscending = true
+    @State private var variableValue = 0.0
+    @State private var isAscending = true
     private let timer = Timer.publish(every: 0.05, on: .main, in: .common).autoconnect()
 
     var body: some View {

@@ -10,7 +10,7 @@ import SwiftUI
 
 struct SymbolDetail: View {
     let symbol: Symbol
-    @Environment(\.dismiss) var dismiss
+    @Environment(\.dismiss) private var dismiss
 
     var body: some View {
         VStack {
