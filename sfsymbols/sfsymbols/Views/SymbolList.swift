@@ -35,7 +35,8 @@ struct SymbolList: View {
                     Menu {
                         Picker(selection: $sortOrder, label: Text("Sort")) {
                             ForEach(SortOrder.allCases, id: \.self) { order in
-                                Text(order.rawValue).tag(order)
+                                Text(order.rawValue)
+                                    .tag(order)
                             }
                         }
                         Divider()
@@ -48,6 +49,9 @@ struct SymbolList: View {
                         Image(systemName: "ellipsis.circle.fill")
                             .navButtonStyle()
                     }
+                    // Temporary fix for the menu selection picker flickering selection when shown
+                    // Broken since Xcode 14 beta 4 (Reported FB11104547)
+                    .id(UUID())
                 }
             }
         }
