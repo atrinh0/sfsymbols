@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC0566B428B12DCA00EA5342 /* SortOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0566B328B12DCA00EA5342 /* SortOrder.swift */; };
 		FC1E55D52326D576003052AD /* SFSymbolsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1E55D42326D576003052AD /* SFSymbolsApp.swift */; };
 		FC1E55D92326D576003052AD /* SymbolList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1E55D82326D576003052AD /* SymbolList.swift */; };
 		FC1E55DB2326D578003052AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC1E55DA2326D578003052AD /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FC0566B328B12DCA00EA5342 /* SortOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortOrder.swift; sourceTree = "<group>"; };
 		FC1E55D12326D576003052AD /* sfsymbols.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sfsymbols.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC1E55D42326D576003052AD /* SFSymbolsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbolsApp.swift; sourceTree = "<group>"; };
 		FC1E55D82326D576003052AD /* SymbolList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolList.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				FC9FF79124A9112A00D69C8E /* Data */,
+				FC0566B328B12DCA00EA5342 /* SortOrder.swift */,
 				FC9FF78F24A90B6200D69C8E /* SymbolModel.swift */,
 				FCCE860124A909DB00781703 /* Symbol.swift */,
 			);
@@ -252,6 +255,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC0566B428B12DCA00EA5342 /* SortOrder.swift in Sources */,
 				FCBFDCA22753FABE00AF2C5D /* Image+Extensions.swift in Sources */,
 				FC1E55D52326D576003052AD /* SFSymbolsApp.swift in Sources */,
 				FCCE860224A909DB00781703 /* Symbol.swift in Sources */,

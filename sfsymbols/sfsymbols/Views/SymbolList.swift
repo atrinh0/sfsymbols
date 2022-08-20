@@ -35,7 +35,7 @@ struct SymbolList: View {
                     Menu {
                         Picker(selection: $sortOrder, label: Text("Sort")) {
                             ForEach(SortOrder.allCases, id: \.self) { order in
-                                Text(order.rawValue)
+                                Label(order.rawValue, systemImage: order.menuSymbol)
                                     .tag(order)
                             }
                         }

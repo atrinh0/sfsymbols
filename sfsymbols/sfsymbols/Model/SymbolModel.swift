@@ -8,13 +8,6 @@
 
 import SwiftUI
 
-enum SortOrder: String, CaseIterable {
-    case defaultOrder = "Sorted by Default"
-    case name = "Sorted by Name"
-    case multicolored = "Multicolored Only"
-    case variable = "Variable Only"
-}
-
 class SymbolModel {
     private var symbolsSortedByDefault: [Symbol] = []
     private var symbolsSortedByName: [Symbol] = []
