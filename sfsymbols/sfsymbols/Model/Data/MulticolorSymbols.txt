@@ -229,6 +229,7 @@ sun.haze.circle.fill
 moon.fill
 moon.circle.fill
 moon.haze
+moon.haze.fill
 moon.haze.circle.fill
 sparkle
 sparkles
@@ -628,6 +629,7 @@ creditcard.circle.fill
 creditcard.trianglebadge.exclamationmark
 wand.and.rays
 wand.and.rays.inverse
+nosign.app.fill
 gauge.medium.badge.plus
 gauge.medium.badge.minus
 dice
@@ -867,6 +869,11 @@ box.truck.badge.clock.fill
 bicycle.circle.fill
 parkingsign.circle.fill
 fuelpump.circle.fill
+windshield.front.and.wiper
+windshield.front.and.wiper.and.drop
+windshield.rear.and.wiper
+mirror.side.left
+mirror.side.right
 lungs
 lungs.fill
 allergens
@@ -903,7 +910,7 @@ leaf.circle.fill
 leaf.arrow.triangle.circlepath
 camera.macro.circle.fill
 film.circle.fill
-face.smiling.fill
+face.smiling.inverse
 eye.circle.fill
 eye.square.fill
 eye.slash.circle.fill
@@ -923,6 +930,7 @@ hand.raised.circle
 hand.raised.circle.fill
 hand.raised.square
 hand.raised.square.fill
+hand.app.fill
 hand.thumbsup.circle.fill
 hand.thumbsdown.circle.fill
 rectangle.and.hand.point.up.left

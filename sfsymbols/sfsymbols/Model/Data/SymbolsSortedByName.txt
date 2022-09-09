@@ -265,6 +265,7 @@ a.magnify
 a.square
 a.square.fill
 abc
+abs.brakesignal
 air.conditioner.horizontal
 air.conditioner.horizontal.fill
 air.conditioner.vertical
@@ -862,6 +863,7 @@ bolt.badge.clock
 bolt.badge.clock.fill
 bolt.batteryblock
 bolt.batteryblock.fill
+bolt.brakesignal
 bolt.car
 bolt.car.circle
 bolt.car.circle.fill
@@ -913,6 +915,8 @@ box.truck.badge.clock.fill
 box.truck.fill
 brain
 brain.head.profile
+brakesignal
+brakesignal.dashed
 brazilianrealsign
 brazilianrealsign.circle
 brazilianrealsign.circle.fill
@@ -1637,6 +1641,7 @@ exclamationmark.3
 exclamationmark.applewatch
 exclamationmark.arrow.circlepath
 exclamationmark.arrow.triangle.2.circlepath
+exclamationmark.brakesignal
 exclamationmark.bubble
 exclamationmark.bubble.circle
 exclamationmark.bubble.circle.fill
@@ -1711,7 +1716,7 @@ f.square.fill
 face.dashed
 face.dashed.fill
 face.smiling
-face.smiling.fill
+face.smiling.inverse
 faceid
 facemask
 facemask.fill
@@ -1727,6 +1732,8 @@ fan.oscillation
 fan.oscillation.fill
 fanblades
 fanblades.fill
+fanblades.slash
+fanblades.slash.fill
 faxmachine
 faxmachine.fill
 ferry
@@ -1879,6 +1886,7 @@ florinsign.square
 florinsign.square.fill
 flowchart
 flowchart.fill
+fluid.brakesignal
 fn
 folder
 folder.badge.gearshape
@@ -2023,6 +2031,8 @@ hammer
 hammer.circle
 hammer.circle.fill
 hammer.fill
+hand.app
+hand.app.fill
 hand.draw
 hand.draw.fill
 hand.point.down
@@ -2067,6 +2077,10 @@ hands.sparkles
 hands.sparkles.fill
 hare
 hare.fill
+headlight.high.beam
+headlight.high.beam.fill
+headlight.low.beam
+headlight.low.beam.fill
 headphones
 headphones.circle
 headphones.circle.fill
@@ -2114,6 +2128,7 @@ hockey.puck
 hockey.puck.circle
 hockey.puck.circle.fill
 hockey.puck.fill
+hold.brakesignal
 homekit
 homepod
 homepod.2
@@ -2621,6 +2636,8 @@ minus.rectangle.portrait
 minus.rectangle.portrait.fill
 minus.square
 minus.square.fill
+mirror.side.left
+mirror.side.right
 moon
 moon.circle
 moon.circle.fill
@@ -2693,6 +2710,8 @@ newspaper.fill
 nose
 nose.fill
 nosign
+nosign.app
+nosign.app.fill
 note
 note.text
 note.text.badge.plus
@@ -2756,7 +2775,11 @@ paperplane.circle.fill
 paperplane.fill
 paragraphsign
 parentheses
+parkinglight
+parkinglight.fill
 parkingsign
+parkingsign.brakesignal
+parkingsign.brakesignal.slash
 parkingsign.circle
 parkingsign.circle.fill
 party.popper
@@ -2805,6 +2828,8 @@ person.2.crop.square.stack
 person.2.crop.square.stack.fill
 person.2.fill
 person.2.gobackward
+person.2.slash
+person.2.slash.fill
 person.2.wave.2
 person.2.wave.2.fill
 person.3
@@ -2812,6 +2837,7 @@ person.3.fill
 person.3.sequence
 person.3.sequence.fill
 person.and.arrow.left.and.arrow.right
+person.and.background.dotted
 person.badge.clock
 person.badge.clock.fill
 person.badge.key
@@ -2825,7 +2851,6 @@ person.bust.fill
 person.circle
 person.circle.fill
 person.crop.artframe
-person.crop.background.dotted
 person.crop.circle
 person.crop.circle.badge
 person.crop.circle.badge.checkmark
@@ -3356,6 +3381,9 @@ return.left
 return.right
 rhombus
 rhombus.fill
+road.lanes
+road.lanes.curved.left
+road.lanes.curved.right
 roller.shade.closed
 roller.shade.open
 roman.shade.closed
@@ -3858,6 +3886,7 @@ theatermasks
 theatermasks.circle
 theatermasks.circle.fill
 theatermasks.fill
+thermometer.brakesignal
 thermometer.high
 thermometer.low
 thermometer.medium
@@ -3955,6 +3984,7 @@ turkishlirasign.square.fill
 tv
 tv.and.hifispeaker.fill
 tv.and.mediabox
+tv.and.mediabox.fill
 tv.circle
 tv.circle.fill
 tv.fill
@@ -4082,6 +4112,11 @@ window.shade.closed
 window.shade.open
 window.vertical.closed
 window.vertical.open
+windshield.front.and.fluid
+windshield.front.and.wiper
+windshield.front.and.wiper.and.drop
+windshield.rear.and.fluid
+windshield.rear.and.wiper
 wineglass
 wineglass.fill
 wonsign
