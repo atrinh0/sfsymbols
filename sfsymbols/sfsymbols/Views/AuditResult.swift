@@ -18,7 +18,7 @@ struct AuditResult: View {
         self.model = model
         symbolsNotFound = model.symbols(for: .defaultOrder)
             .filter { UIImage(systemName: $0.name) == nil }
-            .map { $0.name }
+            .map(\.name)
     }
 
     var body: some View {

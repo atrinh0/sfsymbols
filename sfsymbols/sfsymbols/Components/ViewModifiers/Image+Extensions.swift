@@ -19,6 +19,6 @@ struct NavButton: ViewModifier {
 
 extension Image {
     func navButtonStyle() -> some View {
-        self.modifier(NavButton())
+        modifier(NavButton())
     }
 }

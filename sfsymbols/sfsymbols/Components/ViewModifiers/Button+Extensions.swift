@@ -20,6 +20,6 @@ struct ButtonPressedStyle: ButtonStyle {
 
 extension Button {
     func pressableButton() -> some View {
-        self.buttonStyle(ButtonPressedStyle())
+        buttonStyle(ButtonPressedStyle())
     }
 }

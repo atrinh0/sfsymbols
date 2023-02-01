@@ -1,0 +1,7 @@
+--swiftversion 5.7
+
+--trimwhitespace nonblank-lines
+
+--disable braces
+--disable indent
+--disable trailingCommas

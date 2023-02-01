@@ -55,7 +55,8 @@ extension SymbolModel {
 
     private func symbolsFromFile(name: String) -> [String] {
         guard let fileURL = Bundle.main.url(forResource: name, withExtension: "txt"),
-              let fileContents = try? String(contentsOf: fileURL) else {
+              let fileContents = try? String(contentsOf: fileURL)
+        else {
                   return []
         }
         return fileContents.split(separator: "\n").compactMap { $0.isEmpty ? nil : String($0) }

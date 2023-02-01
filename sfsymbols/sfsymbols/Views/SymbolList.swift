@@ -6,9 +6,9 @@
 //  Copyright © 2019 An Trinh. All rights reserved.
 //
 
+import CoreHaptics
 import SwiftUI
 import UIKit
-import CoreHaptics
 
 struct SymbolList: View {
     private let model = SymbolModel()
