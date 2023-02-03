@@ -44,27 +44,31 @@ struct SymbolCell: View {
                 .frame(width: isFocused ? 300 : 100)
         }
         .onReceive(timer) { _ in
-            var newValue = variableValue
-            if isAscending {
-                newValue += 0.05
-            } else {
-                newValue -= 0.05
-            }
-
-            // allow going beyond bounds to pause at each end
-            if newValue > 1.25 {
-                isAscending = false
-            } else if newValue < -0.25 {
-                isAscending = true
-            }
-
-            variableValue = newValue
+            variableTimerTick()
         }
         .onAppear {
             if !symbol.isVariable {
                 timer.upstream.connect().cancel()
             }
         }
+    }
+
+    private func variableTimerTick() {
+        var newValue = variableValue
+        if isAscending {
+            newValue += 0.05
+        } else {
+            newValue -= 0.05
+        }
+
+        // allow going beyond bounds to pause at each end
+        if newValue > 1.25 {
+            isAscending = false
+        } else if newValue < -0.25 {
+            isAscending = true
+        }
+
+        variableValue = newValue
     }
 
     private var safeVariableValue: Double {
