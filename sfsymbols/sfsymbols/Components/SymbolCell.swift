@@ -25,6 +25,7 @@ struct SymbolCell: View {
                 if symbol.isMulticolored {
                     Image(systemName: symbol.name, variableValue: safeVariableValue)
                         .renderingMode(.original)
+                        .foregroundColor(.secondary)
                         .imageScale(.large)
                         .font(.system(size: isFocused ? 90 : 30))
                 } else {
