@@ -28,12 +28,14 @@ struct SymbolCell: View {
                         .foregroundColor(.secondary)
                         .imageScale(.large)
                         .font(.system(size: isFocused ? 90 : 30))
+                        .symbolEffect(.bounce, value: isAscending)
                 } else {
                     Image(systemName: symbol.name, variableValue: safeVariableValue)
                         .renderingMode(.template)
                         .foregroundColor(.primary)
                         .imageScale(.large)
                         .font(.system(size: isFocused ? 90 : 30))
+                        .symbolEffect(.bounce, value: isAscending)
                 }
             }
             Text(symbol.name)
