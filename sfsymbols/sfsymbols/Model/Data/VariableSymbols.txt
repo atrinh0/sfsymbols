@@ -50,8 +50,8 @@ ellipsis.bubble
 ellipsis.bubble.fill
 ellipsis.vertical.bubble
 ellipsis.vertical.bubble.fill
-speaker.wave.2.bubble.left
-speaker.wave.2.bubble.left.fill
+speaker.wave.2.bubble
+speaker.wave.2.bubble.fill
 phone.badge.waveform
 phone.badge.waveform.fill
 phone.down.waves.left.and.right
@@ -103,9 +103,13 @@ iphone.gen3.radiowaves.left.and.right.circle.fill
 iphone.radiowaves.left.and.right
 iphone.radiowaves.left.and.right.circle
 iphone.radiowaves.left.and.right.circle.fill
+opticid
+opticid.fill
 applewatch.radiowaves.left.and.right
 airpodspro.chargingcase.wireless.radiowaves.left.and.right
 airpodspro.chargingcase.wireless.radiowaves.left.and.right.fill
+tv.badge.wifi
+tv.badge.wifi.fill
 airplayaudio
 airplayaudio.circle
 airplayaudio.circle.fill
@@ -161,6 +165,10 @@ square.stack.3d.down.forward
 square.stack.3d.down.forward.fill
 square.stack.3d.up
 square.stack.3d.up.fill
+square.stack.3d.up.badge.automatic
+square.stack.3d.up.badge.automatic.fill
+square.stack.3d.up.trianglebadge.exclamationmark
+square.stack.3d.up.trianglebadge.exclamationmark.fill
 square.stack.3d.forward.dottedline
 square.stack.3d.forward.dottedline.fill
 livephoto
@@ -175,6 +183,8 @@ chart.bar
 chart.bar.fill
 cellularbars
 chart.bar.xaxis
+chart.bar.xaxis.ascending
+chart.bar.xaxis.ascending.badge.clock
 chart.dots.scatter
 waveform
 waveform.circle
