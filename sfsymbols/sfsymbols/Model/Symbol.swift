@@ -12,5 +12,8 @@ struct Symbol: Hashable, Identifiable {
     let name: String
     let isMulticolor: Bool
     let isVariable: Bool
-    let id = UUID()
+
+    var id: String {
+        name
+    }
 }
