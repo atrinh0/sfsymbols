@@ -9,8 +9,7 @@
 import SwiftUI
 
 class SymbolModel {
-    private var symbolsSortedByDefault: [Symbol] = []
-    private var symbolsSortedByName: [Symbol] = []
+    private var allSymbols: [Symbol] = []
     private var multicolorSymbols: [Symbol] = []
     private var variableSymbols: [Symbol] = []
 
@@ -18,38 +17,33 @@ class SymbolModel {
         loadSymbols()
     }
 
-    func symbols(for sortOrder: SortOrder, filter: String = "") -> [Symbol] {
-        let symbolsMap: [SortOrder: [Symbol]] = [.defaultOrder: symbolsSortedByDefault,
-                                                 .name: symbolsSortedByName,
-                                                 .multicolored: multicolorSymbols,
-                                                 .variable: variableSymbols]
-        let symbols = symbolsMap[sortOrder] ?? []
-        if filter.isEmpty {
+    func symbols(for selectedFilter: Filter, searchQuery: String = "") -> [Symbol] {
+        let symbolsMap: [Filter: [Symbol]] = [.all: allSymbols,
+                                              .multicolor: multicolorSymbols,
+                                              .variable: variableSymbols]
+        let symbols = symbolsMap[selectedFilter] ?? []
+        if searchQuery.isEmpty {
             return symbols
         }
 
-        return symbols.filter { $0.name.lowercased().contains(filter.lowercased()) }
+        return symbols.filter { $0.name.lowercased().contains(searchQuery.lowercased()) }
     }
 }
 
 extension SymbolModel {
     private func loadSymbols() {
-        let defaultOrderStrings = symbolsFromFile(name: "SymbolsSortedByDefault")
-        let nameStrings = symbolsFromFile(name: "SymbolsSortedByName")
-        let multicoloredStrings = symbolsFromFile(name: "MulticolorSymbols")
+        let allStrings = symbolsFromFile(name: "AllSymbols")
+        let multicolorStrings = symbolsFromFile(name: "MulticolorSymbols")
         let variableStrings = symbolsFromFile(name: "VariableSymbols")
 
-        symbolsSortedByDefault = defaultOrderStrings.map {
-            Symbol(name: $0, isMulticolored: multicoloredStrings.contains($0), isVariable: variableStrings.contains($0))
+        allSymbols = allStrings.map {
+            Symbol(name: $0, isMulticolor: multicolorStrings.contains($0), isVariable: variableStrings.contains($0))
         }
-        symbolsSortedByName = nameStrings.map {
-            Symbol(name: $0, isMulticolored: multicoloredStrings.contains($0), isVariable: variableStrings.contains($0))
-        }
-        multicolorSymbols = multicoloredStrings.map {
-            Symbol(name: $0, isMulticolored: true, isVariable: variableStrings.contains($0))
+        multicolorSymbols = multicolorStrings.map {
+            Symbol(name: $0, isMulticolor: true, isVariable: variableStrings.contains($0))
         }
         variableSymbols = variableStrings.map {
-            Symbol(name: $0, isMulticolored: multicoloredStrings.contains($0), isVariable: true)
+            Symbol(name: $0, isMulticolor: multicolorStrings.contains($0), isVariable: true)
         }
     }
 

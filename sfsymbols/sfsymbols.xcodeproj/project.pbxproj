@@ -7,15 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FC0566B428B12DCA00EA5342 /* SortOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0566B328B12DCA00EA5342 /* SortOrder.swift */; };
+		FC0566B428B12DCA00EA5342 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0566B328B12DCA00EA5342 /* Filter.swift */; };
 		FC1E55D52326D576003052AD /* SFSymbolsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1E55D42326D576003052AD /* SFSymbolsApp.swift */; };
 		FC1E55D92326D576003052AD /* SymbolList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1E55D82326D576003052AD /* SymbolList.swift */; };
 		FC1E55DB2326D578003052AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC1E55DA2326D578003052AD /* Assets.xcassets */; };
 		FC1E55DE2326D578003052AD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC1E55DD2326D578003052AD /* Preview Assets.xcassets */; };
 		FC72E00C28523E52009B5FEA /* VariableSymbols.txt in Resources */ = {isa = PBXBuildFile; fileRef = FC72E00B28523E52009B5FEA /* VariableSymbols.txt */; };
 		FC9FF79024A90B6200D69C8E /* SymbolModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9FF78F24A90B6200D69C8E /* SymbolModel.swift */; };
-		FC9FF79324A9115700D69C8E /* SymbolsSortedByDefault.txt in Resources */ = {isa = PBXBuildFile; fileRef = FC9FF79224A9115700D69C8E /* SymbolsSortedByDefault.txt */; };
-		FC9FF79524A913E500D69C8E /* SymbolsSortedByName.txt in Resources */ = {isa = PBXBuildFile; fileRef = FC9FF79424A913E500D69C8E /* SymbolsSortedByName.txt */; };
+		FC9FF79324A9115700D69C8E /* AllSymbols.txt in Resources */ = {isa = PBXBuildFile; fileRef = FC9FF79224A9115700D69C8E /* AllSymbols.txt */; };
 		FC9FF79724A9142A00D69C8E /* MulticolorSymbols.txt in Resources */ = {isa = PBXBuildFile; fileRef = FC9FF79624A9142A00D69C8E /* MulticolorSymbols.txt */; };
 		FCAEB4DB24D36478008D6C05 /* Button+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAEB4DA24D36478008D6C05 /* Button+Extensions.swift */; };
 		FCB91C5A267127BE00DA3E9C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = FCB91C59267127BE00DA3E9C /* README.md */; };
@@ -27,7 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FC0566B328B12DCA00EA5342 /* SortOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortOrder.swift; sourceTree = "<group>"; };
+		FC0566B328B12DCA00EA5342 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 		FC1E55D12326D576003052AD /* sfsymbols.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sfsymbols.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC1E55D42326D576003052AD /* SFSymbolsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbolsApp.swift; sourceTree = "<group>"; };
 		FC1E55D82326D576003052AD /* SymbolList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolList.swift; sourceTree = "<group>"; };
@@ -37,8 +36,7 @@
 		FC5617982331A04E00CE22D3 /* sfsymbols.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = sfsymbols.entitlements; sourceTree = "<group>"; };
 		FC72E00B28523E52009B5FEA /* VariableSymbols.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = VariableSymbols.txt; sourceTree = "<group>"; };
 		FC9FF78F24A90B6200D69C8E /* SymbolModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolModel.swift; sourceTree = "<group>"; };
-		FC9FF79224A9115700D69C8E /* SymbolsSortedByDefault.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = SymbolsSortedByDefault.txt; sourceTree = "<group>"; };
-		FC9FF79424A913E500D69C8E /* SymbolsSortedByName.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = SymbolsSortedByName.txt; sourceTree = "<group>"; };
+		FC9FF79224A9115700D69C8E /* AllSymbols.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = AllSymbols.txt; sourceTree = "<group>"; };
 		FC9FF79624A9142A00D69C8E /* MulticolorSymbols.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = MulticolorSymbols.txt; sourceTree = "<group>"; };
 		FCAEB4DA24D36478008D6C05 /* Button+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+Extensions.swift"; sourceTree = "<group>"; };
 		FCB91C59267127BE00DA3E9C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -100,8 +98,7 @@
 		FC9FF79124A9112A00D69C8E /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				FC9FF79224A9115700D69C8E /* SymbolsSortedByDefault.txt */,
-				FC9FF79424A913E500D69C8E /* SymbolsSortedByName.txt */,
+				FC9FF79224A9115700D69C8E /* AllSymbols.txt */,
 				FC9FF79624A9142A00D69C8E /* MulticolorSymbols.txt */,
 				FC72E00B28523E52009B5FEA /* VariableSymbols.txt */,
 			);
@@ -151,7 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				FC9FF79124A9112A00D69C8E /* Data */,
-				FC0566B328B12DCA00EA5342 /* SortOrder.swift */,
+				FC0566B328B12DCA00EA5342 /* Filter.swift */,
 				FC9FF78F24A90B6200D69C8E /* SymbolModel.swift */,
 				FCCE860124A909DB00781703 /* Symbol.swift */,
 			);
@@ -220,9 +217,8 @@
 			files = (
 				FCB91C5A267127BE00DA3E9C /* README.md in Resources */,
 				FC72E00C28523E52009B5FEA /* VariableSymbols.txt in Resources */,
-				FC9FF79324A9115700D69C8E /* SymbolsSortedByDefault.txt in Resources */,
+				FC9FF79324A9115700D69C8E /* AllSymbols.txt in Resources */,
 				FC9FF79724A9142A00D69C8E /* MulticolorSymbols.txt in Resources */,
-				FC9FF79524A913E500D69C8E /* SymbolsSortedByName.txt in Resources */,
 				FC1E55DE2326D578003052AD /* Preview Assets.xcassets in Resources */,
 				FC1E55DB2326D578003052AD /* Assets.xcassets in Resources */,
 			);
@@ -276,7 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC0566B428B12DCA00EA5342 /* SortOrder.swift in Sources */,
+				FC0566B428B12DCA00EA5342 /* Filter.swift in Sources */,
 				FCBFDCA22753FABE00AF2C5D /* Image+Extensions.swift in Sources */,
 				FC1E55D52326D576003052AD /* SFSymbolsApp.swift in Sources */,
 				FCCE860224A909DB00781703 /* Symbol.swift in Sources */,

@@ -22,21 +22,12 @@ struct SymbolCell: View {
                 RoundedRectangle(cornerRadius: isFocused ? 24 : 8, style: .continuous)
                     .foregroundColor(.secondary.opacity(0.25))
                     .frame(width: isFocused ? 300 : 100, height: isFocused ? 234 : 78)
-                if symbol.isMulticolored {
-                    Image(systemName: symbol.name, variableValue: safeVariableValue)
-                        .renderingMode(.original)
-                        .foregroundColor(.secondary)
-                        .imageScale(.large)
-                        .font(.system(size: isFocused ? 90 : 30))
-                        .symbolEffect(.bounce, value: isAscending)
-                } else {
-                    Image(systemName: symbol.name, variableValue: safeVariableValue)
-                        .renderingMode(.template)
-                        .foregroundColor(.primary)
-                        .imageScale(.large)
-                        .font(.system(size: isFocused ? 90 : 30))
-                        .symbolEffect(.bounce, value: isAscending)
-                }
+                Image(systemName: symbol.name, variableValue: safeVariableValue)
+                    .renderingMode(symbol.isMulticolor ? .original : .template)
+                    .foregroundColor(symbol.isMulticolor ? .secondary : .primary)
+                    .imageScale(.large)
+                    .font(.system(size: isFocused ? 90 : 30))
+                    .symbolEffect(.bounce, value: isAscending)
             }
             Text(symbol.name)
                 .font(isFocused ? .largeTitle : .caption)
@@ -81,8 +72,8 @@ struct SymbolCell: View {
 struct SymbolCell_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            SymbolCell(symbol: Symbol(name: "leaf.fill", isMulticolored: true, isVariable: false), isFocused: false)
-            SymbolCell(symbol: Symbol(name: "leaf.fill", isMulticolored: true, isVariable: false), isFocused: true)
+            SymbolCell(symbol: Symbol(name: "leaf.fill", isMulticolor: true, isVariable: false), isFocused: false)
+            SymbolCell(symbol: Symbol(name: "leaf.fill", isMulticolor: true, isVariable: false), isFocused: true)
         }
     }
 }

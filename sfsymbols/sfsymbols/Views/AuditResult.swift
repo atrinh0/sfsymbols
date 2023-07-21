@@ -16,7 +16,7 @@ struct AuditResult: View {
 
     init(model: SymbolModel) {
         self.model = model
-        symbolsNotFound = model.symbols(for: .defaultOrder)
+        symbolsNotFound = model.symbols(for: .all)
             .filter { UIImage(systemName: $0.name) == nil }
             .map(\.name)
     }
@@ -54,7 +54,7 @@ struct AuditResult: View {
     }
 
     private var totalCount: Int {
-        model.symbols(for: .defaultOrder).count
+        model.symbols(for: .all).count
     }
 }
 

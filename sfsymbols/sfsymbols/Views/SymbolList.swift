@@ -14,7 +14,7 @@ struct SymbolList: View {
     private let model = SymbolModel()
 
     @State private var searchText = ""
-    @State private var sortOrder: SortOrder = .defaultOrder
+    @State private var sortOrder: Filter = .all
     @State private var selectedSymbol: Symbol?
     @State private var showingAudit = false
 
@@ -34,7 +34,7 @@ struct SymbolList: View {
                 ToolbarItem(placement: .primaryAction) {
                     Menu {
                         Picker(selection: $sortOrder, label: Text("Sort")) {
-                            ForEach(SortOrder.allCases, id: \.self) { order in
+                            ForEach(Filter.allCases, id: \.self) { order in
                                 Label(order.rawValue, systemImage: order.menuSymbol)
                                     .tag(order)
                             }
@@ -47,8 +47,8 @@ struct SymbolList: View {
                         }
                     } label: {
                         Image(systemName: "ellipsis.circle.fill")
-                            .navButtonStyle()
                     }
+                    .tint(.primary.opacity(0.7))
                     // Temporary fix for the menu selection picker flickering selection when shown
                     // Broken since Xcode 14 beta 4 (Reported FB11104547)
                     .id(UUID())
@@ -107,7 +107,7 @@ struct SymbolList: View {
     // MARK: - Helpers
 
     private func filteredSymbols(_ searchText: String) -> [Symbol] {
-        model.symbols(for: sortOrder, filter: searchText)
+        model.symbols(for: sortOrder, searchQuery: searchText)
     }
 
     private func select(_ symbol: Symbol) {
