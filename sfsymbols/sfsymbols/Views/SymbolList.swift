@@ -48,10 +48,6 @@ struct SymbolList: View {
                     } label: {
                         Image(systemName: "ellipsis.circle.fill")
                     }
-                    .tint(.primary.opacity(0.7))
-                    // Temporary fix for the menu selection picker flickering selection when shown
-                    // Broken since Xcode 14 beta 4 (Reported FB11104547)
-                    .id(UUID())
                 }
             }
         }
