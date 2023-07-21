@@ -117,8 +117,6 @@ struct SymbolList: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        SymbolList()
-    }
+#Preview {
+    SymbolList()
 }

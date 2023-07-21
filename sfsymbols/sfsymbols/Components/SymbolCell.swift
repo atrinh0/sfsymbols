@@ -69,11 +69,10 @@ struct SymbolCell: View {
     }
 }
 
-struct SymbolCell_Previews: PreviewProvider {
-    static var previews: some View {
-        Group {
-            SymbolCell(symbol: Symbol(name: "leaf.fill", isMulticolor: true, isVariable: false), isFocused: false)
-            SymbolCell(symbol: Symbol(name: "leaf.fill", isMulticolor: true, isVariable: false), isFocused: true)
-        }
-    }
+#Preview("Cell") {
+    SymbolCell(symbol: Symbol(name: "leaf.fill", isMulticolor: true, isVariable: false), isFocused: false)
+}
+
+#Preview("Focused") {
+    SymbolCell(symbol: Symbol(name: "leaf.fill", isMulticolor: true, isVariable: false), isFocused: true)
 }

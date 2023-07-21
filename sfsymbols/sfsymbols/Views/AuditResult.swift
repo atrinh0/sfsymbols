@@ -58,8 +58,6 @@ struct AuditResult: View {
     }
 }
 
-struct AuditResult_Previews: PreviewProvider {
-    static var previews: some View {
-        AuditResult(model: SymbolModel())
-    }
+#Preview {
+    AuditResult(model: SymbolModel())
 }
