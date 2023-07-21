@@ -14,7 +14,7 @@ struct SymbolList: View {
     private let model = SymbolModel()
 
     @State private var searchText = ""
-    @State private var sortOrder: Filter = .all
+    @State private var selectedFilter: Filter = .all
     @State private var selectedSymbol: Symbol?
     @State private var showingAudit = false
 
@@ -33,10 +33,10 @@ struct SymbolList: View {
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
                     Menu {
-                        Picker(selection: $sortOrder, label: Text("Sort")) {
-                            ForEach(Filter.allCases, id: \.self) { order in
-                                Label(order.rawValue, systemImage: order.menuSymbol)
-                                    .tag(order)
+                        Picker(selection: $selectedFilter, label: Text("Filter")) {
+                            ForEach(Filter.allCases, id: \.self) { filter in
+                                Label(filter.rawValue, systemImage: filter.menuSymbol)
+                                    .tag(filter)
                             }
                         }
                         Divider()
@@ -46,7 +46,7 @@ struct SymbolList: View {
                             Label("Run Audit...", systemImage: "text.magnifyingglass")
                         }
                     } label: {
-                        Image(systemName: "ellipsis.circle.fill")
+                        Image(systemName: "ellipsis.circle")
                     }
                 }
             }
@@ -103,7 +103,7 @@ struct SymbolList: View {
     // MARK: - Helpers
 
     private func filteredSymbols(_ searchText: String) -> [Symbol] {
-        model.symbols(for: sortOrder, searchQuery: searchText)
+        model.symbols(for: selectedFilter, searchQuery: searchText)
     }
 
     private func select(_ symbol: Symbol) {
