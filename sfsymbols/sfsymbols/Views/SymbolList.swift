@@ -112,8 +112,10 @@ struct SymbolList: View {
     }
 
     private func hapticBump() {
+    #if !os(xrOS)
         let generator = UIImpactFeedbackGenerator(style: .light)
         generator.impactOccurred()
+    #endif
     }
 }
 
